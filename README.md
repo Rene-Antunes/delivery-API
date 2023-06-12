@@ -5,8 +5,7 @@
 
 **1. Clone the application**
 
-  Personally i give preference to clone with SSH, considered more practical:
-  git@github.com:Rene-Antunes/DeliveryFood-API.git
+  clone with SSH or HTTPS.
 
 **2. Change local host, MySQL username and password as per your installation**
 - Open src/test/resources/application-test.properties
