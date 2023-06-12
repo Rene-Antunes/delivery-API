@@ -26,6 +26,7 @@ public class SquigglyConfig {
 		filterRegistration.setOrder(1);
 		filterRegistration.setUrlPatterns(urlPatterns);
 		
+		
 		return filterRegistration;
 	}
 }
