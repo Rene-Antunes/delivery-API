@@ -16,10 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import com.reneantunes.reneFood.api.assembler.RestauranteModelAssembler;
 import com.reneantunes.reneFood.api.assembler.RestauranteModelDisassembler;
 import com.reneantunes.reneFood.api.model.RestauranteModel;
 import com.reneantunes.reneFood.api.model.input.RestauranteInput;
+import com.reneantunes.reneFood.api.model.view.RestauranteView;
 import com.reneantunes.reneFood.domain.exception.EntidadeNaoEncontrataException;
 import com.reneantunes.reneFood.domain.exception.NegocioException;
 import com.reneantunes.reneFood.domain.model.Restaurante;
@@ -42,12 +44,17 @@ public class RestauranteController {
 	@Autowired
 	private RestauranteModelDisassembler restauranteModelDisassembler;
 	
-	
+	@JsonView(RestauranteView.Resumo.class)
 	@GetMapping
 	public List<RestauranteModel> listar(){
-		
 		return restauranteModelAssembler.toColletionModel(restauranteRepository.findAll());
 		
+	}
+	
+	@JsonView(RestauranteView.ApenasNome.class)
+	@GetMapping(params = "projecao=apenas-nome")
+	public List<RestauranteModel> listarApenasNomes(){
+		return listar();
 	}
 	
 	@GetMapping("/{restauranteId}")
