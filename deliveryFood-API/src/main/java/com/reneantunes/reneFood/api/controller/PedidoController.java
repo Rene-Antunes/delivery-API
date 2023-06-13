@@ -25,7 +25,9 @@ import com.reneantunes.reneFood.domain.exception.NegocioException;
 import com.reneantunes.reneFood.domain.model.Pedido;
 import com.reneantunes.reneFood.domain.model.Usuario;
 import com.reneantunes.reneFood.domain.repository.PedidoRepository;
+import com.reneantunes.reneFood.domain.repository.filter.PedidoFilter;
 import com.reneantunes.reneFood.domain.service.EmissaoPedidoService;
+import com.reneantunes.reneFood.infrainstructure.repository.spec.PedidoSpecs;
 
 @RestController
 @RequestMapping(value = "/pedidos")
@@ -48,8 +50,8 @@ public class PedidoController {
     
     
     @GetMapping
-    public List<PedidoResumoModel> listar(){
-    	List<Pedido> todosPedidos = pedidoRepository.findAll();
+    public List<PedidoResumoModel> pesquisar(PedidoFilter filtro){
+    	List<Pedido> todosPedidos = pedidoRepository.findAll(PedidoSpecs.usandoFiltro(filtro));
     	
     	return pedidoResumoModelAssembler.toCollectionModel(todosPedidos);
     }
