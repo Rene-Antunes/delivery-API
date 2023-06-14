@@ -1,14 +1,14 @@
 package com.reneantunes.reneFood.api.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import javax.validation.Valid;
 
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,14 +18,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 
 import com.reneantunes.reneFood.api.assembler.CozinhaInputDisassembler;
 import com.reneantunes.reneFood.api.assembler.CozinhaModelAssembler;
 import com.reneantunes.reneFood.api.model.CozinhaModel;
 import com.reneantunes.reneFood.api.model.input.CozinhaInput;
-import com.reneantunes.reneFood.domain.exception.EntidadeEmUsoException;
-import com.reneantunes.reneFood.domain.exception.EntidadeNaoEncontrataException;
 import com.reneantunes.reneFood.domain.model.Cozinha;
 import com.reneantunes.reneFood.domain.repository.CozinhaRepository;
 import com.reneantunes.reneFood.domain.service.CadastroCozinhaService;
@@ -47,12 +44,17 @@ public class CozinhaController {
 	private CozinhaInputDisassembler cozinhaInputDisassembler;
 	
 	@GetMapping
-	public List<CozinhaModel> listar () {
+	public Page<CozinhaModel> listar (Pageable pageable) {
 		
-		List<Cozinha> todasCozinhas = cozinhaRepository.findAll();
+		Page<Cozinha> cozinhasPage = cozinhaRepository.findAll(pageable);
 		
-		return cozinhaModelAssembler.toCollectionModel(todasCozinhas);
+		List<CozinhaModel> cozinhasModel = cozinhaModelAssembler
+				.toCollectionModel(cozinhasPage.getContent());
 		
+		Page<CozinhaModel> cozinhasModelPage = new PageImpl<>(cozinhasModel, pageable,
+				cozinhasPage.getTotalElements());
+		 
+		return cozinhasModelPage;
 	}
 	
 	
