@@ -5,8 +5,9 @@ import java.util.ArrayList;
 import org.springframework.data.jpa.domain.Specification;
 
 import javax.persistence.criteria.Predicate;
+
+import com.reneantunes.reneFood.domain.filter.PedidoFilter;
 import com.reneantunes.reneFood.domain.model.Pedido;
-import com.reneantunes.reneFood.domain.repository.filter.PedidoFilter;
 
 public class PedidoSpecs {
 	

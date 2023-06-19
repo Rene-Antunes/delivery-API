@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.repository.filter;
+package com.reneantunes.reneFood.domain.filter;
 
 import java.time.OffsetDateTime;
 

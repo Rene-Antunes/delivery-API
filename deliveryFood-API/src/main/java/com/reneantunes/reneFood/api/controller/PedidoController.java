@@ -28,10 +28,10 @@ import com.reneantunes.reneFood.api.model.input.PedidoInput;
 import com.reneantunes.reneFood.core.data.PageableTranslator;
 import com.reneantunes.reneFood.domain.exception.EntidadeNaoEncontrataException;
 import com.reneantunes.reneFood.domain.exception.NegocioException;
+import com.reneantunes.reneFood.domain.filter.PedidoFilter;
 import com.reneantunes.reneFood.domain.model.Pedido;
 import com.reneantunes.reneFood.domain.model.Usuario;
 import com.reneantunes.reneFood.domain.repository.PedidoRepository;
-import com.reneantunes.reneFood.domain.repository.filter.PedidoFilter;
 import com.reneantunes.reneFood.domain.service.EmissaoPedidoService;
 import com.reneantunes.reneFood.infrainstructure.repository.spec.PedidoSpecs;
 
