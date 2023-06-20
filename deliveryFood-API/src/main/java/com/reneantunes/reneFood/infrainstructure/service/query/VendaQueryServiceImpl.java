@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.infrainstructure.service;
+package com.reneantunes.reneFood.infrainstructure.service.query;
 
 import java.util.ArrayList;
 import java.util.Date;
