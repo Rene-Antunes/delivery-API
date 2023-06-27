@@ -6,11 +6,12 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import com.reneantunes.reneFood.domain.model.Produto;
 import com.reneantunes.reneFood.domain.model.Restaurante;
-
-public interface ProdutoRepository extends JpaRepository<Produto, Long> {
+@Repository
+public interface ProdutoRepository extends JpaRepository<Produto, Long>,  ProdutoRepositoryQueries {
 
 	@Query("from Produto where restaurante.id = :restaurante and id = :produto")
     Optional<Produto> findById(@Param("restaurante") Long restauranteId, 
