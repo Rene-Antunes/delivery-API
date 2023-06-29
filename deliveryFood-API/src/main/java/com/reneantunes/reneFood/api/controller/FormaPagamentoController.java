@@ -72,11 +72,8 @@ public class FormaPagamentoController {
 			@RequestBody @Valid FormaPagamentoInput formaPagamentoInput ) {
 		
 		FormaPagamento formaPagamentoAtual = cadastroFormaPagamentoService.buscarOuFalhar(formaPagamentoId);
-		
 		formaPagamentoDisassembler.copyToDomainObject(formaPagamentoInput, formaPagamentoAtual);
-		
 		formaPagamentoAtual = cadastroFormaPagamentoService.salvar(formaPagamentoAtual);
-		
 		return formaPagamentoAssembler.toModel(formaPagamentoAtual);
 		
 		

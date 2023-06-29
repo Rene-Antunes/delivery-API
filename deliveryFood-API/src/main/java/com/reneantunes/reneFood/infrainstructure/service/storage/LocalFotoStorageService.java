@@ -1,6 +1,6 @@
 package com.reneantunes.reneFood.infrainstructure.service.storage;
 
-import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -27,7 +27,16 @@ public class LocalFotoStorageService implements FotoStorageService {
 			throw new StorageException("Não foi possível armazenar arquivo.", e);
 		}
 	}
-
+	
+	@Override
+	public InputStream recuperar(String nomeArquivo) {
+		try {
+			Path arquivoPath = getArquivoPath(nomeArquivo);
+			return Files.newInputStream(arquivoPath);
+		} catch (Exception e) {
+			throw new StorageException("Não foi possível recuperar arquivo.", e);
+		}
+	}
 	
 	@Override
 	public void remover(String nomeArquivo) {
@@ -44,6 +53,10 @@ public class LocalFotoStorageService implements FotoStorageService {
 	private Path getArquivoPath(String nomeArquivo) {
 		return diretorioFotos.resolve(Path.of(nomeArquivo));
 	}
+
+
+
+
 
 
 }

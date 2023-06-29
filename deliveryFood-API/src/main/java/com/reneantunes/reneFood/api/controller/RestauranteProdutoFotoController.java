@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,7 @@ import com.reneantunes.reneFood.api.model.FotoProdutoModel;
 import com.reneantunes.reneFood.api.model.input.FotoProdutoInput;
 import com.reneantunes.reneFood.domain.model.FotoProduto;
 import com.reneantunes.reneFood.domain.model.Produto;
+import com.reneantunes.reneFood.domain.repository.ProdutoRepository;
 import com.reneantunes.reneFood.domain.service.CadastroProdutoService;
 import com.reneantunes.reneFood.domain.service.CatalogoFotoProdutoService;
 
@@ -32,6 +34,18 @@ public class RestauranteProdutoFotoController {
 	
 	@Autowired
 	private FotoProdutoModelAssembler fotoProdutoModelAssembler;
+	
+	
+	
+	
+	@GetMapping
+	public FotoProdutoModel buscar(@PathVariable Long restauranteId,
+			@PathVariable Long produtoId) {
+		FotoProduto fotoProduto = catalogoFotoProdutoService.buscarOuFalhar(restauranteId, produtoId);
+		return fotoProdutoModelAssembler.toModel(fotoProduto);
+	}
+
+	
 	
 	@PutMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public FotoProdutoModel atualizarFoto(@PathVariable Long restauranteId,
