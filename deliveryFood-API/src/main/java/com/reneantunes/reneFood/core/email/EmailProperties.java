@@ -19,7 +19,7 @@ public class EmailProperties {
 	@NotNull
 	private String remetente;
 	
-	private Implemetacao impl = Implemetacao.SMTP;
+	private Implemetacao impl = Implemetacao.FAKE;
 	
 	
 	public enum Implemetacao{
