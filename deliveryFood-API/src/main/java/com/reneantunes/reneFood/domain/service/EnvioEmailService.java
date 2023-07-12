@@ -1,5 +1,6 @@
 package com.reneantunes.reneFood.domain.service;
 
+import java.util.Map;
 import java.util.Set;
 
 import lombok.Builder;
@@ -21,5 +22,8 @@ public interface EnvioEmailService {
 		private String assunto;
 		@NonNull
 		private String corpo;
+		
+		@Singular("variavel")
+		private Map<String, Object> variaveis;
 	}
 }
