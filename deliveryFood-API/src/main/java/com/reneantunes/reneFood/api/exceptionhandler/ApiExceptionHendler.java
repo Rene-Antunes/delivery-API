@@ -244,16 +244,7 @@ public class ApiExceptionHendler extends ResponseEntityExceptionHandler{
 		Problem problem = createProblemBuilder(status, problemType, detail)
 				.userMessage(MSG_ERRO_GENERICA_USUARIO_FINAL)
 				.build();
-		
-		
-		
-//		Problem problem = Problem.builder()
-//				.status(status.value())
-//				.type("http://renefood.com.br/entidade-nao-encontrada")
-//				.title("Entidade não encontrada")
-//				.detail(detail)
-//				.build();
-		
+
 		return handleExceptionInternal(e, problem, new HttpHeaders(),
 				status, request);
 	}
