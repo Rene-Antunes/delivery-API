@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.controller;
+package com.delivery.food.api.controller;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,15 +22,15 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.reneantunes.reneFood.api.assembler.FotoProdutoModelAssembler;
-import com.reneantunes.reneFood.api.model.FotoProdutoModel;
-import com.reneantunes.reneFood.api.model.input.FotoProdutoInput;
-import com.reneantunes.reneFood.domain.exception.EntidadeNaoEncontrataException;
-import com.reneantunes.reneFood.domain.model.FotoProduto;
-import com.reneantunes.reneFood.domain.model.Produto;
-import com.reneantunes.reneFood.domain.service.CadastroProdutoService;
-import com.reneantunes.reneFood.domain.service.CatalogoFotoProdutoService;
-import com.reneantunes.reneFood.domain.service.FotoStorageService;
+import com.delivery.food.api.assembler.FotoProdutoModelAssembler;
+import com.delivery.food.api.model.FotoProdutoModel;
+import com.delivery.food.api.model.input.FotoProdutoInput;
+import com.delivery.food.domain.exception.EntidadeNaoEncontrataException;
+import com.delivery.food.domain.model.FotoProduto;
+import com.delivery.food.domain.model.Produto;
+import com.delivery.food.domain.service.CadastroProdutoService;
+import com.delivery.food.domain.service.CatalogoFotoProdutoService;
+import com.delivery.food.domain.service.FotoStorageService;
 
 @RestController
 @RequestMapping("/restaurantes/{restauranteId}/produtos/{produtoId}/foto")

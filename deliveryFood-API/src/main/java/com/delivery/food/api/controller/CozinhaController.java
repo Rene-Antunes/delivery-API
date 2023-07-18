@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.controller;
+package com.delivery.food.api.controller;
 
 import java.util.List;
 
@@ -19,13 +19,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.reneantunes.reneFood.api.assembler.CozinhaInputDisassembler;
-import com.reneantunes.reneFood.api.assembler.CozinhaModelAssembler;
-import com.reneantunes.reneFood.api.model.CozinhaModel;
-import com.reneantunes.reneFood.api.model.input.CozinhaInput;
-import com.reneantunes.reneFood.domain.model.Cozinha;
-import com.reneantunes.reneFood.domain.repository.CozinhaRepository;
-import com.reneantunes.reneFood.domain.service.CadastroCozinhaService;
+import com.delivery.food.api.assembler.CozinhaInputDisassembler;
+import com.delivery.food.api.assembler.CozinhaModelAssembler;
+import com.delivery.food.api.model.CozinhaModel;
+import com.delivery.food.api.model.input.CozinhaInput;
+import com.delivery.food.domain.model.Cozinha;
+import com.delivery.food.domain.repository.CozinhaRepository;
+import com.delivery.food.domain.service.CadastroCozinhaService;
 
 
 @RestController

@@ -1,13 +1,13 @@
-package com.reneantunes.reneFood.domain.listener;
+package com.delivery.food.domain.listener;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.event.TransactionalEventListener;
 
-import com.reneantunes.reneFood.domain.event.PedidoCanceladoEvent;
-import com.reneantunes.reneFood.domain.model.Pedido;
-import com.reneantunes.reneFood.domain.service.EnvioEmailService;
-import com.reneantunes.reneFood.domain.service.EnvioEmailService.Mensagem;
+import com.delivery.food.domain.event.PedidoCanceladoEvent;
+import com.delivery.food.domain.model.Pedido;
+import com.delivery.food.domain.service.EnvioEmailService;
+import com.delivery.food.domain.service.EnvioEmailService.Mensagem;
 
 @Component
 public class NotificacaoClientePedidoCanceladoListener {

@@ -1,12 +1,12 @@
-package com.reneantunes.reneFood.domain.service;
+package com.delivery.food.domain.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.reneantunes.reneFood.domain.model.Pedido;
-import com.reneantunes.reneFood.domain.repository.PedidoRepository;
-import com.reneantunes.reneFood.domain.service.EnvioEmailService.Mensagem;
+import com.delivery.food.domain.model.Pedido;
+import com.delivery.food.domain.repository.PedidoRepository;
+import com.delivery.food.domain.service.EnvioEmailService.Mensagem;
 
 @Service
 public class FluxoPedidoService {

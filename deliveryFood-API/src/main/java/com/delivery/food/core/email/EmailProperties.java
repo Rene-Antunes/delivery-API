@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.core.email;
+package com.delivery.food.core.email;
 
 import javax.validation.constraints.NotNull;
 

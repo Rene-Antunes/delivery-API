@@ -1,12 +1,12 @@
-package com.reneantunes.reneFood.domain.service;
+package com.delivery.food.domain.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.reneantunes.reneFood.domain.exception.ProdutoNaoEncontradoException;
-import com.reneantunes.reneFood.domain.model.Produto;
-import com.reneantunes.reneFood.domain.repository.ProdutoRepository;
+import com.delivery.food.domain.exception.ProdutoNaoEncontradoException;
+import com.delivery.food.domain.model.Produto;
+import com.delivery.food.domain.repository.ProdutoRepository;
 
 @Service
 public class CadastroProdutoService {

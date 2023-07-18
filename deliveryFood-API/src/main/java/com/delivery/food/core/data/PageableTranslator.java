@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.core.data;
+package com.delivery.food.core.data;
 
 import java.util.Map;
 import java.util.stream.Collectors;

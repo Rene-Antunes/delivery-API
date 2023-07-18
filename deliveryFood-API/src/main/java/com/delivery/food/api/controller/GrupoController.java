@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.controller;
+package com.delivery.food.api.controller;
 
 import java.util.List;
 
@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.reneantunes.reneFood.api.assembler.GrupoInputDisassembler;
-import com.reneantunes.reneFood.api.assembler.GrupoModelAssembler;
-import com.reneantunes.reneFood.api.model.GrupoModel;
-import com.reneantunes.reneFood.api.model.input.GrupoInput;
-import com.reneantunes.reneFood.domain.model.Grupo;
-import com.reneantunes.reneFood.domain.repository.GrupoRepository;
-import com.reneantunes.reneFood.domain.service.CadastroGrupoService;
+import com.delivery.food.api.assembler.GrupoInputDisassembler;
+import com.delivery.food.api.assembler.GrupoModelAssembler;
+import com.delivery.food.api.model.GrupoModel;
+import com.delivery.food.api.model.input.GrupoInput;
+import com.delivery.food.domain.model.Grupo;
+import com.delivery.food.domain.repository.GrupoRepository;
+import com.delivery.food.domain.service.CadastroGrupoService;
 
 @RestController
 @RequestMapping("/grupos")

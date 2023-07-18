@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.model.view;
+package com.delivery.food.api.model.view;
 
 public interface RestauranteView {
 	

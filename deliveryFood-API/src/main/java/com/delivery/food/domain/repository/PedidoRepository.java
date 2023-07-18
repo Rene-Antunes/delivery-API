@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.repository;
+package com.delivery.food.domain.repository;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.reneantunes.reneFood.domain.model.Pedido;
+import com.delivery.food.domain.model.Pedido;
 
 @Repository
 public interface PedidoRepository extends CustomJpaRepository<Pedido, Long>, 

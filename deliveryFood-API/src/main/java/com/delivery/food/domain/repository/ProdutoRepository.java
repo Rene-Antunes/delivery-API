@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.repository;
+package com.delivery.food.domain.repository;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,9 +8,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.reneantunes.reneFood.domain.model.FotoProduto;
-import com.reneantunes.reneFood.domain.model.Produto;
-import com.reneantunes.reneFood.domain.model.Restaurante;
+import com.delivery.food.domain.model.FotoProduto;
+import com.delivery.food.domain.model.Produto;
+import com.delivery.food.domain.model.Restaurante;
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Long>,  ProdutoRepositoryQueries {
 

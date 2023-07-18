@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.model;
+package com.delivery.food.domain.model;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,15 +1,15 @@
-package com.reneantunes.reneFood.domain.service;
+package com.delivery.food.domain.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.reneantunes.reneFood.domain.exception.EntidadeNaoEncontrataException;
-import com.reneantunes.reneFood.domain.model.Cidade;
-import com.reneantunes.reneFood.domain.model.Estado;
-import com.reneantunes.reneFood.domain.repository.CidadeRepository;
-import com.reneantunes.reneFood.domain.repository.EstadoRepository;
+import com.delivery.food.domain.exception.EntidadeNaoEncontrataException;
+import com.delivery.food.domain.model.Cidade;
+import com.delivery.food.domain.model.Estado;
+import com.delivery.food.domain.repository.CidadeRepository;
+import com.delivery.food.domain.repository.EstadoRepository;
 
 @Service
 public class CadastroCidadeService {

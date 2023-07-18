@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.model.input;
+package com.delivery.food.api.model.input;
 
 import java.math.BigDecimal;
 
@@ -7,7 +7,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PositiveOrZero;
 
-import com.reneantunes.reneFood.core.validation.TaxaFrete;
+import com.delivery.food.core.validation.TaxaFrete;
 
 import lombok.Getter;
 import lombok.Setter;

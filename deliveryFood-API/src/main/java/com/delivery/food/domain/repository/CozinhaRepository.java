@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.repository;
+package com.delivery.food.domain.repository;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.reneantunes.reneFood.domain.model.Cozinha;
+import com.delivery.food.domain.model.Cozinha;
 
 @Repository
 public interface CozinhaRepository extends JpaRepository<Cozinha, Long>{

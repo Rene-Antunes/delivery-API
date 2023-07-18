@@ -1,13 +1,13 @@
-package com.reneantunes.reneFood.core.modelMapper;
+package com.delivery.food.core.modelMapper;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.reneantunes.reneFood.api.model.EnderecoModel;
-import com.reneantunes.reneFood.api.model.input.ItemPedidoInput;
-import com.reneantunes.reneFood.domain.model.Endereco;
-import com.reneantunes.reneFood.domain.model.ItemPedido;
+import com.delivery.food.api.model.EnderecoModel;
+import com.delivery.food.api.model.input.ItemPedidoInput;
+import com.delivery.food.domain.model.Endereco;
+import com.delivery.food.domain.model.ItemPedido;
 
 @Configuration
 public class ModelMapperConfig {

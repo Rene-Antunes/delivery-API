@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.infrainstructure.repository;
+package com.delivery.food.infrainstructure.repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -6,8 +6,8 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
-import com.reneantunes.reneFood.domain.model.FotoProduto;
-import com.reneantunes.reneFood.domain.repository.ProdutoRepositoryQueries;
+import com.delivery.food.domain.model.FotoProduto;
+import com.delivery.food.domain.repository.ProdutoRepositoryQueries;
 
 @Repository
 public class ProdutoRepositoryImpl implements ProdutoRepositoryQueries {

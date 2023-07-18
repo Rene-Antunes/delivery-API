@@ -1,7 +1,7 @@
-package com.reneantunes.reneFood.api.model;
+package com.delivery.food.api.model;
 
+import com.delivery.food.api.model.view.RestauranteView;
 import com.fasterxml.jackson.annotation.JsonView;
-import com.reneantunes.reneFood.api.model.view.RestauranteView;
 
 import lombok.Getter;
 import lombok.Setter;

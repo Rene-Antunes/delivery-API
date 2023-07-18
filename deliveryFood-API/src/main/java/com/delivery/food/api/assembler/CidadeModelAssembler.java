@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.assembler;
+package com.delivery.food.api.assembler;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -7,8 +7,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.reneantunes.reneFood.api.model.CidadeModel;
-import com.reneantunes.reneFood.domain.model.Cidade;
+import com.delivery.food.api.model.CidadeModel;
+import com.delivery.food.domain.model.Cidade;
 @Component
 public class CidadeModelAssembler {
 	

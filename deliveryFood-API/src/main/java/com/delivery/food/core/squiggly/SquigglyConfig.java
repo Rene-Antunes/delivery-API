@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.core.squiggly;
+package com.delivery.food.core.squiggly;
 
 import java.util.Arrays;
 

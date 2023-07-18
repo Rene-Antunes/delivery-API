@@ -1,9 +1,9 @@
-package com.reneantunes.reneFood.domain.repository;
+package com.delivery.food.domain.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.reneantunes.reneFood.domain.model.Estado;
+import com.delivery.food.domain.model.Estado;
 
 @Repository
 public interface EstadoRepository  extends JpaRepository<Estado, Long> {

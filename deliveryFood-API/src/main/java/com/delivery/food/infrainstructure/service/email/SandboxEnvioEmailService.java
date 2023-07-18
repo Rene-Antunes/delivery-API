@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.infrainstructure.service.email;
+package com.delivery.food.infrainstructure.service.email;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
@@ -6,7 +6,7 @@ import javax.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.MimeMessageHelper;
 
-import com.reneantunes.reneFood.core.email.EmailProperties;
+import com.delivery.food.core.email.EmailProperties;
 
 public class SandboxEnvioEmailService extends SmtpEnvioEmailService {
 	

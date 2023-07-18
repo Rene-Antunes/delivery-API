@@ -1,15 +1,15 @@
-package com.reneantunes.reneFood.api.assembler;
+package com.delivery.food.api.assembler;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-import com.reneantunes.reneFood.api.model.input.RestauranteInput;
-import com.reneantunes.reneFood.domain.model.Cidade;
-import com.reneantunes.reneFood.domain.model.Cozinha;
-import com.reneantunes.reneFood.domain.model.Endereco;
-import com.reneantunes.reneFood.domain.model.Restaurante;
+import com.delivery.food.api.model.input.RestauranteInput;
+import com.delivery.food.domain.model.Cidade;
+import com.delivery.food.domain.model.Cozinha;
+import com.delivery.food.domain.model.Endereco;
+import com.delivery.food.domain.model.Restaurante;
 
 @Component
 public class RestauranteModelDisassembler {
@@ -25,7 +25,7 @@ public class RestauranteModelDisassembler {
 	
 	public void copyToDomainObject(RestauranteInput restauranteInput, Restaurante restaurante) {
 		// To avoid error: org.hibernate.HibernateException: identifier of an instance of
-		//com.reneantunes.reneFood.domain.model.Cozinha was altered from 1 to 2
+		//com.delivery.food.domain.model.Cozinha was altered from 1 to 2
 		
 		if (restaurante.getEndereco() != null) {
 			

@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.exceptionhandler;
+package com.delivery.food.api.exceptionhandler;
 
 import lombok.Getter;
 

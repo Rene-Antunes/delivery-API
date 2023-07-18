@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.core.squiggly;
+package com.delivery.food.core.squiggly;
 
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;

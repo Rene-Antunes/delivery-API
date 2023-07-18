@@ -1,7 +1,7 @@
-package com.reneantunes.reneFood.infrainstructure.repository;
+package com.delivery.food.infrainstructure.repository;
 
-import static com.reneantunes.reneFood.infrainstructure.repository.spec.RestauranteSpecs.comFreteGratis;
-import static com.reneantunes.reneFood.infrainstructure.repository.spec.RestauranteSpecs.comNomeSemelhante;
+import static com.delivery.food.infrainstructure.repository.spec.RestauranteSpecs.comFreteGratis;
+import static com.delivery.food.infrainstructure.repository.spec.RestauranteSpecs.comNomeSemelhante;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -21,9 +21,9 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
 
-import com.reneantunes.reneFood.domain.model.Restaurante;
-import com.reneantunes.reneFood.domain.repository.RestauranteRepository;
-import com.reneantunes.reneFood.domain.repository.RestauranteRepositoryQueries;
+import com.delivery.food.domain.model.Restaurante;
+import com.delivery.food.domain.repository.RestauranteRepository;
+import com.delivery.food.domain.repository.RestauranteRepositoryQueries;
 
 @Repository
 public class RestauranteRepositoryImpl implements RestauranteRepositoryQueries {

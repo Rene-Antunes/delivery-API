@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.model.dto;
+package com.delivery.food.domain.model.dto;
 
 import java.math.BigDecimal;
 import java.util.Date;

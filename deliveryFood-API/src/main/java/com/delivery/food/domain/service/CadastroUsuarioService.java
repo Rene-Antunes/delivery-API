@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.service;
+package com.delivery.food.domain.service;
 
 import java.util.Optional;
 
@@ -7,11 +7,11 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.reneantunes.reneFood.domain.exception.NegocioException;
-import com.reneantunes.reneFood.domain.exception.UsuarioNaoEncontradoException;
-import com.reneantunes.reneFood.domain.model.Grupo;
-import com.reneantunes.reneFood.domain.model.Usuario;
-import com.reneantunes.reneFood.domain.repository.UsuarioRepository;
+import com.delivery.food.domain.exception.NegocioException;
+import com.delivery.food.domain.exception.UsuarioNaoEncontradoException;
+import com.delivery.food.domain.model.Grupo;
+import com.delivery.food.domain.model.Usuario;
+import com.delivery.food.domain.repository.UsuarioRepository;
 
 @Service
 public class CadastroUsuarioService {

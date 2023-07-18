@@ -1,4 +1,4 @@
-	package com.reneantunes.reneFood.core.validation;
+	package com.delivery.food.core.validation;
 
 import java.util.Arrays;
 import java.util.List;

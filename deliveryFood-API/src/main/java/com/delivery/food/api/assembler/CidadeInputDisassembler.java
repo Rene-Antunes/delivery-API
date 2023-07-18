@@ -1,12 +1,12 @@
-package com.reneantunes.reneFood.api.assembler;
+package com.delivery.food.api.assembler;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.reneantunes.reneFood.api.model.input.CidadeInput;
-import com.reneantunes.reneFood.domain.model.Cidade;
-import com.reneantunes.reneFood.domain.model.Estado;
+import com.delivery.food.api.model.input.CidadeInput;
+import com.delivery.food.domain.model.Cidade;
+import com.delivery.food.domain.model.Estado;
 
 @Component
 public class CidadeInputDisassembler {

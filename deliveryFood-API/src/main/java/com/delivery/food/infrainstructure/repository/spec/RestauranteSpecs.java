@@ -1,10 +1,10 @@
-package com.reneantunes.reneFood.infrainstructure.repository.spec;
+package com.delivery.food.infrainstructure.repository.spec;
 
 import java.math.BigDecimal;
 
 import org.springframework.data.jpa.domain.Specification;
 
-import com.reneantunes.reneFood.domain.model.Restaurante;
+import com.delivery.food.domain.model.Restaurante;
 
 public class RestauranteSpecs {
 	

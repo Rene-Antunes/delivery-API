@@ -17,10 +17,10 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.context.TestPropertySource;
 
-import com.reneantunes.reneFood.domain.model.Cozinha;
-import com.reneantunes.reneFood.domain.model.Restaurante;
-import com.reneantunes.reneFood.domain.repository.CozinhaRepository;
-import com.reneantunes.reneFood.domain.repository.RestauranteRepository;
+import com.delivery.food.domain.model.Cozinha;
+import com.delivery.food.domain.model.Restaurante;
+import com.delivery.food.domain.repository.CozinhaRepository;
+import com.delivery.food.domain.repository.RestauranteRepository;
 import com.reneantunes.reneFood.util.DatabaseCleaner;
 import com.reneantunes.reneFood.util.ResourceUtils;
 

@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.infrainstructure.service.storage;
+package com.delivery.food.infrainstructure.service.storage;
 
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -8,7 +8,7 @@ import org.flywaydb.core.internal.util.FileCopyUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import com.reneantunes.reneFood.domain.service.FotoStorageService;
+import com.delivery.food.domain.service.FotoStorageService;
 
 @Service
 public class LocalFotoStorageService implements FotoStorageService {

@@ -1,6 +1,6 @@
-package com.reneantunes.reneFood.domain.repository;
+package com.delivery.food.domain.repository;
 
-import com.reneantunes.reneFood.domain.model.FotoProduto;
+import com.delivery.food.domain.model.FotoProduto;
 
 public interface ProdutoRepositoryQueries {
 	

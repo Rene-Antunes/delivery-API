@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.service;
+package com.delivery.food.domain.service;
 
 import java.io.InputStream;
 import java.util.UUID;

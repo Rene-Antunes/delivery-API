@@ -1,9 +1,9 @@
-package com.reneantunes.reneFood.domain.repository;
+package com.delivery.food.domain.repository;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-import com.reneantunes.reneFood.domain.model.Restaurante;
+import com.delivery.food.domain.model.Restaurante;
 
 public interface RestauranteRepositoryQueries {
 

@@ -1,6 +1,6 @@
-package com.reneantunes.reneFood.domain.event;
+package com.delivery.food.domain.event;
 
-import com.reneantunes.reneFood.domain.model.Pedido;
+import com.delivery.food.domain.model.Pedido;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

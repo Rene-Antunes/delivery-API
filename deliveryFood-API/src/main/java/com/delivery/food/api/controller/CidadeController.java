@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.controller;
+package com.delivery.food.api.controller;
 
 import java.util.List;
 
@@ -17,15 +17,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.reneantunes.reneFood.api.assembler.CidadeInputDisassembler;
-import com.reneantunes.reneFood.api.assembler.CidadeModelAssembler;
-import com.reneantunes.reneFood.api.model.CidadeModel;
-import com.reneantunes.reneFood.api.model.input.CidadeInput;
-import com.reneantunes.reneFood.domain.exception.EstadoNaoEncontrataException;
-import com.reneantunes.reneFood.domain.exception.NegocioException;
-import com.reneantunes.reneFood.domain.model.Cidade;
-import com.reneantunes.reneFood.domain.repository.CidadeRepository;
-import com.reneantunes.reneFood.domain.service.CadastroCidadeService;
+import com.delivery.food.api.assembler.CidadeInputDisassembler;
+import com.delivery.food.api.assembler.CidadeModelAssembler;
+import com.delivery.food.api.model.CidadeModel;
+import com.delivery.food.api.model.input.CidadeInput;
+import com.delivery.food.domain.exception.EstadoNaoEncontrataException;
+import com.delivery.food.domain.exception.NegocioException;
+import com.delivery.food.domain.model.Cidade;
+import com.delivery.food.domain.repository.CidadeRepository;
+import com.delivery.food.domain.service.CadastroCidadeService;
 
 @RestController
 @RequestMapping(value = "/cidades")

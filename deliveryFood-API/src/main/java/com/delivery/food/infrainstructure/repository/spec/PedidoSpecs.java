@@ -1,13 +1,13 @@
-package com.reneantunes.reneFood.infrainstructure.repository.spec;
+package com.delivery.food.infrainstructure.repository.spec;
 
 import java.util.ArrayList;
 
 import org.springframework.data.jpa.domain.Specification;
 
-import javax.persistence.criteria.Predicate;
+import com.delivery.food.domain.filter.PedidoFilter;
+import com.delivery.food.domain.model.Pedido;
 
-import com.reneantunes.reneFood.domain.filter.PedidoFilter;
-import com.reneantunes.reneFood.domain.model.Pedido;
+import javax.persistence.criteria.Predicate;
 
 public class PedidoSpecs {
 	

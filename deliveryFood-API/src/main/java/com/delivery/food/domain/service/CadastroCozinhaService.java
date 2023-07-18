@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.service;
+package com.delivery.food.domain.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -6,10 +6,10 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.reneantunes.reneFood.domain.exception.EntidadeEmUsoException;
-import com.reneantunes.reneFood.domain.exception.EntidadeNaoEncontrataException;
-import com.reneantunes.reneFood.domain.model.Cozinha;
-import com.reneantunes.reneFood.domain.repository.CozinhaRepository;
+import com.delivery.food.domain.exception.EntidadeEmUsoException;
+import com.delivery.food.domain.exception.EntidadeNaoEncontrataException;
+import com.delivery.food.domain.model.Cozinha;
+import com.delivery.food.domain.repository.CozinhaRepository;
 
 @Service
 public class CadastroCozinhaService {

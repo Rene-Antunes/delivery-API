@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.infrainstructure.service.report;
+package com.delivery.food.infrainstructure.service.report;
 
 import java.util.HashMap;
 import java.util.Locale;
@@ -6,9 +6,9 @@ import java.util.Locale;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.reneantunes.reneFood.domain.filter.VendaDiariaFilter;
-import com.reneantunes.reneFood.domain.service.VendaQueryService;
-import com.reneantunes.reneFood.domain.service.VendaReportService;
+import com.delivery.food.domain.filter.VendaDiariaFilter;
+import com.delivery.food.domain.service.VendaQueryService;
+import com.delivery.food.domain.service.VendaReportService;
 
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;

@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.service;
+package com.delivery.food.domain.service;
 
 import java.util.List;
 
@@ -7,13 +7,13 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.reneantunes.reneFood.domain.exception.EntidadeNaoEncontrataException;
-import com.reneantunes.reneFood.domain.model.Cidade;
-import com.reneantunes.reneFood.domain.model.Cozinha;
-import com.reneantunes.reneFood.domain.model.FormaPagamento;
-import com.reneantunes.reneFood.domain.model.Restaurante;
-import com.reneantunes.reneFood.domain.model.Usuario;
-import com.reneantunes.reneFood.domain.repository.RestauranteRepository;
+import com.delivery.food.domain.exception.EntidadeNaoEncontrataException;
+import com.delivery.food.domain.model.Cidade;
+import com.delivery.food.domain.model.Cozinha;
+import com.delivery.food.domain.model.FormaPagamento;
+import com.delivery.food.domain.model.Restaurante;
+import com.delivery.food.domain.model.Usuario;
+import com.delivery.food.domain.repository.RestauranteRepository;
 
 @Service
 public class CadastroRestauranteService {

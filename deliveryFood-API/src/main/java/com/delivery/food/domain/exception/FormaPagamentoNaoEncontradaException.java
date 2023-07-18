@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.exception;
+package com.delivery.food.domain.exception;
 
 public class FormaPagamentoNaoEncontradaException extends EntidadeNaoEncontrataException {
 	

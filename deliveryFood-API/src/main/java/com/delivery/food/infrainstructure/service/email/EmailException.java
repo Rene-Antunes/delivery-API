@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.infrainstructure.service.email;
+package com.delivery.food.infrainstructure.service.email;
 
 public class EmailException extends RuntimeException {
 	

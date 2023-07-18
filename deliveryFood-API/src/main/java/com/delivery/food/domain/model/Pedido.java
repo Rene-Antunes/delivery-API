@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.model;
+package com.delivery.food.domain.model;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
@@ -23,9 +23,9 @@ import javax.persistence.PrePersist;
 import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.domain.AbstractAggregateRoot;
 
-import com.reneantunes.reneFood.domain.event.PedidoCanceladoEvent;
-import com.reneantunes.reneFood.domain.event.PedidoConfirmadoEvent;
-import com.reneantunes.reneFood.domain.exception.NegocioException;
+import com.delivery.food.domain.event.PedidoCanceladoEvent;
+import com.delivery.food.domain.event.PedidoConfirmadoEvent;
+import com.delivery.food.domain.exception.NegocioException;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

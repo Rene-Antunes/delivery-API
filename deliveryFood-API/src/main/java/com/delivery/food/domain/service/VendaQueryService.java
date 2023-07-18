@@ -1,9 +1,9 @@
-package com.reneantunes.reneFood.domain.service;
+package com.delivery.food.domain.service;
 
 import java.util.List;
 
-import com.reneantunes.reneFood.domain.filter.VendaDiariaFilter;
-import com.reneantunes.reneFood.domain.model.dto.VendaDiaria;
+import com.delivery.food.domain.filter.VendaDiariaFilter;
+import com.delivery.food.domain.model.dto.VendaDiaria;
 
 public interface VendaQueryService {
 	

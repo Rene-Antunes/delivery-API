@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.exceptionhandler;
+package com.delivery.food.api.exceptionhandler;
 
 import java.time.OffsetDateTime;
 import java.util.List;
@@ -25,13 +25,13 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 import org.springframework.web.servlet.NoHandlerFoundException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import com.delivery.food.core.validation.ValidacaoException;
+import com.delivery.food.domain.exception.EntidadeEmUsoException;
+import com.delivery.food.domain.exception.EntidadeNaoEncontrataException;
+import com.delivery.food.domain.exception.NegocioException;
 import com.fasterxml.jackson.databind.JsonMappingException.Reference;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.fasterxml.jackson.databind.exc.PropertyBindingException;
-import com.reneantunes.reneFood.core.validation.ValidacaoException;
-import com.reneantunes.reneFood.domain.exception.EntidadeEmUsoException;
-import com.reneantunes.reneFood.domain.exception.EntidadeNaoEncontrataException;
-import com.reneantunes.reneFood.domain.exception.NegocioException;
 
 @ControllerAdvice
 public class ApiExceptionHendler extends ResponseEntityExceptionHandler{

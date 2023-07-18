@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.infrainstructure.service.report;
+package com.delivery.food.infrainstructure.service.report;
 
 public class ReportException extends RuntimeException {
 

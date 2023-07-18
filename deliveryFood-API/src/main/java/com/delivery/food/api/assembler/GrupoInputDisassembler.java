@@ -1,11 +1,11 @@
-package com.reneantunes.reneFood.api.assembler;
+package com.delivery.food.api.assembler;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.reneantunes.reneFood.api.model.input.GrupoInput;
-import com.reneantunes.reneFood.domain.model.Grupo;
+import com.delivery.food.api.model.input.GrupoInput;
+import com.delivery.food.domain.model.Grupo;
 
 @Component
 public class GrupoInputDisassembler {

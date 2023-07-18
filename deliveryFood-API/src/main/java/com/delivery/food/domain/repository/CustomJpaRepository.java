@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.repository;
+package com.delivery.food.domain.repository;
 
 import java.util.Optional;
 

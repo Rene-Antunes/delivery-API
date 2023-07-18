@@ -1,13 +1,13 @@
-package com.reneantunes.reneFood.core.email;
+package com.delivery.food.core.email;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.reneantunes.reneFood.domain.service.EnvioEmailService;
-import com.reneantunes.reneFood.infrainstructure.service.email.FakeEnvioEmailService;
-import com.reneantunes.reneFood.infrainstructure.service.email.SandboxEnvioEmailService;
-import com.reneantunes.reneFood.infrainstructure.service.email.SmtpEnvioEmailService;
+import com.delivery.food.domain.service.EnvioEmailService;
+import com.delivery.food.infrainstructure.service.email.FakeEnvioEmailService;
+import com.delivery.food.infrainstructure.service.email.SandboxEnvioEmailService;
+import com.delivery.food.infrainstructure.service.email.SmtpEnvioEmailService;
 
 @Configuration
 public class EmailConfig {

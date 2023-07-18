@@ -1,12 +1,12 @@
-package com.reneantunes.reneFood.api.model.input;
+package com.delivery.food.api.model.input;
 
 import javax.validation.constraints.NotNull;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.reneantunes.reneFood.core.validation.FileContentType;
-import com.reneantunes.reneFood.core.validation.FileSize;
+import com.delivery.food.core.validation.FileContentType;
+import com.delivery.food.core.validation.FileSize;
 
 import lombok.Getter;
 import lombok.Setter;

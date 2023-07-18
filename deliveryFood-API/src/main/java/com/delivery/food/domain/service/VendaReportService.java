@@ -1,6 +1,6 @@
-package com.reneantunes.reneFood.domain.service;
+package com.delivery.food.domain.service;
 
-import com.reneantunes.reneFood.domain.filter.VendaDiariaFilter;
+import com.delivery.food.domain.filter.VendaDiariaFilter;
 
 public interface VendaReportService {
 	

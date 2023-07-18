@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.model;
+package com.delivery.food.api.model;
 
 import lombok.Getter;
 import lombok.Setter;

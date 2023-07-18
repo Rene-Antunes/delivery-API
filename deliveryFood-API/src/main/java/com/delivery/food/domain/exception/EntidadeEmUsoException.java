@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.exception;
+package com.delivery.food.domain.exception;
 
 //@ResponseStatus(HttpStatus.CONFLICT)
 public class EntidadeEmUsoException extends RuntimeException {

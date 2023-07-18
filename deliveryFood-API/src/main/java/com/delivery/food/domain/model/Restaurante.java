@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.model;
+package com.delivery.food.domain.model;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
@@ -28,8 +28,8 @@ import javax.validation.groups.Default;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import com.reneantunes.reneFood.core.validation.Groups;
-import com.reneantunes.reneFood.core.validation.TaxaFrete;
+import com.delivery.food.core.validation.Groups;
+import com.delivery.food.core.validation.TaxaFrete;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

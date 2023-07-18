@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.infrainstructure.service.email;
+package com.delivery.food.infrainstructure.service.email;
 
 import lombok.extern.slf4j.Slf4j;
 

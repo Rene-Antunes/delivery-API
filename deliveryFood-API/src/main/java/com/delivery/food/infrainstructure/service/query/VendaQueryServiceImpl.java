@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.infrainstructure.service.query;
+package com.delivery.food.infrainstructure.service.query;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,10 +10,10 @@ import javax.persistence.criteria.Predicate;
 
 import org.springframework.stereotype.Repository;
 
-import com.reneantunes.reneFood.domain.filter.VendaDiariaFilter;
-import com.reneantunes.reneFood.domain.model.Pedido;
-import com.reneantunes.reneFood.domain.model.dto.VendaDiaria;
-import com.reneantunes.reneFood.domain.service.VendaQueryService;
+import com.delivery.food.domain.filter.VendaDiariaFilter;
+import com.delivery.food.domain.model.Pedido;
+import com.delivery.food.domain.model.dto.VendaDiaria;
+import com.delivery.food.domain.service.VendaQueryService;
 
 @Repository
 public class VendaQueryServiceImpl implements VendaQueryService {

@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.controller;
+package com.delivery.food.api.controller;
 
 import java.util.List;
 
@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.reneantunes.reneFood.domain.filter.VendaDiariaFilter;
-import com.reneantunes.reneFood.domain.model.dto.VendaDiaria;
-import com.reneantunes.reneFood.domain.service.VendaQueryService;
-import com.reneantunes.reneFood.domain.service.VendaReportService;
+import com.delivery.food.domain.filter.VendaDiariaFilter;
+import com.delivery.food.domain.model.dto.VendaDiaria;
+import com.delivery.food.domain.service.VendaQueryService;
+import com.delivery.food.domain.service.VendaReportService;
 
 @RestController
 @RequestMapping(path = "/estatisticas")

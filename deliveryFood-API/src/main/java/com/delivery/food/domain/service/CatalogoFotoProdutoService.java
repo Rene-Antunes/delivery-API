@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.service;
+package com.delivery.food.domain.service;
 
 import java.io.InputStream;
 import java.util.Optional;
@@ -8,10 +8,10 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.reneantunes.reneFood.domain.exception.FotoProdutoNaoEncontradaException;
-import com.reneantunes.reneFood.domain.model.FotoProduto;
-import com.reneantunes.reneFood.domain.repository.ProdutoRepository;
-import com.reneantunes.reneFood.domain.service.FotoStorageService.NovaFoto;
+import com.delivery.food.domain.exception.FotoProdutoNaoEncontradaException;
+import com.delivery.food.domain.model.FotoProduto;
+import com.delivery.food.domain.repository.ProdutoRepository;
+import com.delivery.food.domain.service.FotoStorageService.NovaFoto;
 
 @Service
 public class CatalogoFotoProdutoService {

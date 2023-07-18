@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.model;
+package com.delivery.food.domain.model;
 
 
 import javax.persistence.Column;
@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
-import com.reneantunes.reneFood.core.validation.Groups;
+import com.delivery.food.core.validation.Groups;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

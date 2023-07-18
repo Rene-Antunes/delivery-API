@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.controller;
+package com.delivery.food.api.controller;
 
 import java.util.List;
 
@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.reneantunes.reneFood.api.assembler.FormaPagamentoAssembler;
-import com.reneantunes.reneFood.api.assembler.FormaPagamentoDisassembler;
-import com.reneantunes.reneFood.api.model.FormaPagamentoModel;
-import com.reneantunes.reneFood.api.model.input.FormaPagamentoInput;
-import com.reneantunes.reneFood.domain.model.FormaPagamento;
-import com.reneantunes.reneFood.domain.repository.FormaPagamentoRepository;
-import com.reneantunes.reneFood.domain.service.CadastroFormaPagamentoService;
+import com.delivery.food.api.assembler.FormaPagamentoAssembler;
+import com.delivery.food.api.assembler.FormaPagamentoDisassembler;
+import com.delivery.food.api.model.FormaPagamentoModel;
+import com.delivery.food.api.model.input.FormaPagamentoInput;
+import com.delivery.food.domain.model.FormaPagamento;
+import com.delivery.food.domain.repository.FormaPagamentoRepository;
+import com.delivery.food.domain.service.CadastroFormaPagamentoService;
 
 @RestController
 @RequestMapping("/formas-pagamento")

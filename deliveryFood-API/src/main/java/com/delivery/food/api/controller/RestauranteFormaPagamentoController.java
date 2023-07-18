@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.controller;
+package com.delivery.food.api.controller;
 
 import java.util.List;
 
@@ -16,17 +16,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.reneantunes.reneFood.api.assembler.FormaPagamentoAssembler;
-import com.reneantunes.reneFood.api.assembler.RestauranteModelAssembler;
-import com.reneantunes.reneFood.api.assembler.RestauranteModelDisassembler;
-import com.reneantunes.reneFood.api.model.FormaPagamentoModel;
-import com.reneantunes.reneFood.api.model.RestauranteModel;
-import com.reneantunes.reneFood.api.model.input.RestauranteInput;
-import com.reneantunes.reneFood.domain.exception.EntidadeNaoEncontrataException;
-import com.reneantunes.reneFood.domain.exception.NegocioException;
-import com.reneantunes.reneFood.domain.model.Restaurante;
-import com.reneantunes.reneFood.domain.repository.RestauranteRepository;
-import com.reneantunes.reneFood.domain.service.CadastroRestauranteService;
+import com.delivery.food.api.assembler.FormaPagamentoAssembler;
+import com.delivery.food.api.assembler.RestauranteModelAssembler;
+import com.delivery.food.api.assembler.RestauranteModelDisassembler;
+import com.delivery.food.api.model.FormaPagamentoModel;
+import com.delivery.food.api.model.RestauranteModel;
+import com.delivery.food.api.model.input.RestauranteInput;
+import com.delivery.food.domain.exception.EntidadeNaoEncontrataException;
+import com.delivery.food.domain.exception.NegocioException;
+import com.delivery.food.domain.model.Restaurante;
+import com.delivery.food.domain.repository.RestauranteRepository;
+import com.delivery.food.domain.service.CadastroRestauranteService;
 
 @RestController
 @RequestMapping("/restaurantes/{restauranteId}/formas-pagamento")

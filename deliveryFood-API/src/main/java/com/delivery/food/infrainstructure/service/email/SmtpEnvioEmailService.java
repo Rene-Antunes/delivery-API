@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.infrainstructure.service.email;
+package com.delivery.food.infrainstructure.service.email;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
@@ -8,8 +8,8 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 
-import com.reneantunes.reneFood.core.email.EmailProperties;
-import com.reneantunes.reneFood.domain.service.EnvioEmailService;
+import com.delivery.food.core.email.EmailProperties;
+import com.delivery.food.domain.service.EnvioEmailService;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;

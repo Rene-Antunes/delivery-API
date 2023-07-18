@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.core.jacksson;
+package com.delivery.food.core.jacksson;
 
 import java.io.IOException;
 

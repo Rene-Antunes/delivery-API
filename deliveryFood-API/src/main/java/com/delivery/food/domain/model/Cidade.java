@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.model;
+package com.delivery.food.domain.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.groups.ConvertGroup;
 import javax.validation.groups.Default;
 
-import com.reneantunes.reneFood.core.validation.Groups;
+import com.delivery.food.core.validation.Groups;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

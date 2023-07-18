@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.model.input;
+package com.delivery.food.api.model.input;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;

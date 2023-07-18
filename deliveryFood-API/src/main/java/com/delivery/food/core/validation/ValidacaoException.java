@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.core.validation;
+package com.delivery.food.core.validation;
 
 import org.springframework.validation.BindingResult;
 

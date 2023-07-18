@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.controller;
+package com.delivery.food.api.controller;
 
 import java.util.List;
 
@@ -15,15 +15,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.reneantunes.reneFood.api.assembler.UsuarioInputDisassembler;
-import com.reneantunes.reneFood.api.assembler.UsuarioModelAssembler;
-import com.reneantunes.reneFood.api.model.UsuarioModel;
-import com.reneantunes.reneFood.api.model.input.SenhaInput;
-import com.reneantunes.reneFood.api.model.input.UsuarioComSenhaInput;
-import com.reneantunes.reneFood.api.model.input.UsuarioInput;
-import com.reneantunes.reneFood.domain.model.Usuario;
-import com.reneantunes.reneFood.domain.repository.UsuarioRepository;
-import com.reneantunes.reneFood.domain.service.CadastroUsuarioService;
+import com.delivery.food.api.assembler.UsuarioInputDisassembler;
+import com.delivery.food.api.assembler.UsuarioModelAssembler;
+import com.delivery.food.api.model.UsuarioModel;
+import com.delivery.food.api.model.input.SenhaInput;
+import com.delivery.food.api.model.input.UsuarioComSenhaInput;
+import com.delivery.food.api.model.input.UsuarioInput;
+import com.delivery.food.domain.model.Usuario;
+import com.delivery.food.domain.repository.UsuarioRepository;
+import com.delivery.food.domain.service.CadastroUsuarioService;
 
 @RestController
 @RequestMapping(value = "/usuarios")

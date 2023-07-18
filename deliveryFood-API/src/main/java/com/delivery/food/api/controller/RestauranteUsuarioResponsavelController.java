@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.api.controller;
+package com.delivery.food.api.controller;
 
 import java.util.List;
 
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.reneantunes.reneFood.api.assembler.UsuarioModelAssembler;
-import com.reneantunes.reneFood.api.model.UsuarioModel;
-import com.reneantunes.reneFood.domain.model.Restaurante;
-import com.reneantunes.reneFood.domain.service.CadastroRestauranteService;
+import com.delivery.food.api.assembler.UsuarioModelAssembler;
+import com.delivery.food.api.model.UsuarioModel;
+import com.delivery.food.domain.model.Restaurante;
+import com.delivery.food.domain.service.CadastroRestauranteService;
 
 @RestController
 @RequestMapping(value = "/restaurantes/{restauranteId}/responsaveis")

@@ -1,4 +1,4 @@
-package com.reneantunes.reneFood.domain.repository;
+package com.delivery.food.domain.repository;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.reneantunes.reneFood.domain.model.Restaurante;
+import com.delivery.food.domain.model.Restaurante;
 
 @Repository
 public interface RestauranteRepository
