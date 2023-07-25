@@ -29,7 +29,6 @@ import com.delivery.food.domain.repository.RestauranteRepository;
 import com.delivery.food.domain.service.CadastroRestauranteService;
 import com.fasterxml.jackson.annotation.JsonView;
 
-@CrossOrigin
 @RestController
 @RequestMapping("/restaurantes")
 public class RestauranteController {
