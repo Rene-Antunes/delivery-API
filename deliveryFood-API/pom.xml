@@ -8,11 +8,11 @@
 		<version>2.7.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.renefood</groupId>
-	<artifactId>renefood-api</artifactId>
+	<groupId>com.deliveyfood</groupId>
+	<artifactId>deliveyfood</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>renefood-api</name>
-	<description>API do reneFood</description>
+	<name>deliveyfood-api</name>
+	<description>API do deliveyfood</description>
 	<properties>
 		<java.version>17</java.version>
 		<squiggly.version>1.3.18</squiggly.version>
