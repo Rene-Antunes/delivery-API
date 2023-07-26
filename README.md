@@ -1,76 +1,68 @@
-# DeliveryFood-API
-> :construction: It's a Delivery Food work in progress API project made according on REST API :construction:
+<h1>DeliveryFood-API</h1> 
+> :construction: API Rest feito em Java com Spring de Delivery de comida em construção :construction:
 
-## Steps to Setup
+<h2 id="sobre" >Descrição do Projeto </h2>
+Um sistema de delivery de comida algumas features são: permite cadastrar restaurantes e gerenciar pedidos para delivery. É permitido cadastro de usuário, produtos, imagens, cadastrar responsáveis para gerenciamento de conta emissão de pedidos, envios de confirmação, buscas simples e complexas e gerir relatorios.
 
-**1. Clone the application**
 
-  clone with SSH or HTTPS.
 
-**2. Change local host, MySQL username and password as per your installation**
-- Open src/test/resources/application-test.properties
-- change spring.datasource.url, spring.datasource.username and spring.datasource.password as per your MySQL installation
+<h2 id="features">✅ Features</h2>
 
-**3. Create MySQL database**
-- when you run the application the database will be created automatically for now 
+- [x] CRUD de usuário
+- [x] CRUD  de produtos
+- [x] CRUD  de fotos
+- [x] CRUD  de Cidades
+- [x] CRUD  de estados
+- [x] CRUD  de grupos
+- [x] CRUD  de endereço
+- [x] CRUD  de permissões
+- [x] CRUD  de formas de pagamento
+- [x] Emissão de pedidos
+- [x] Associação  e desassociação de permissões a grupos
+- [x] Mudança de  status de pedido ex: criado, enviado, entregue.
 
-**4. Build and run the application**
-- Start the app with Boot Dashboard using Spring-tool-suite
 
-**The app will start running at http://localhost:8080**
+h2 id="comoUsar">⚙️ Como Usar</h2>
 
-## WARNING
-- If you not have lombok maybe the project will appear with errors,
-to avoid this, make plugin download  on https://projectlombok.org/download
-and instal using Spring> Add Starters clicking right button on your project
+<h2 id="requisitos">✅ Pré-requisitos e tecnologias </h2>
 
-## Some app defines following CRUD APIs.
+- [Java](https://www.java.com/pt-BR/download/manual.jsp)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- Maven
+- IDE [Intellij](https://www.jetbrains.com/idea/download/?section=windows) ou [Eclipse](https://www.eclipse.org/downloads/)
+- [MySQL](https://www.mysql.com/downloads/)
+- [Postman](https://www.postman.com)
+- [lombok](https://projectlombok.org/download)
 
-GET /restaurantes
 
-GET /cozinhas
+<h2 id="rodandoApi">🎲 Rodando a Api</h2>
 
-GET /estados
+<h3> Clone este repositório</h3>
 
-GET /cidades
+```
+git clone <https://github.com/Rene-Antunes/delivery-API/tree/main>
+```
 
--------------------------------------
 
-POST /restaurantes
+<h3>Configurando banco de dados</h3>
+É necessário ter MySQL instalado em sua máquina, após instalação crie um banco de dados com nome <strong>deliveryfood</strong>. Pode atualizar o usuário e senha no arquivo <strong>application.properties</strong> para os dados do seu banco de dados.
 
-POST /cozinhas
+<h3>Iniciar aplicação</h3>
+Iniciar por meio da IDE iniciando a classe DeliveyFoodApiAplication.java.
 
-POST /estados
+Pelo terminal:
+```
+java -jar target/deliveyfood-api.jar
+```
+```
+spring.datasource.username=root
+spring.datasource.password=12345678
+```
+ou utilizando o maven
 
-POST /cidades
+```
+mvn spring-boot:run
+```
 
---------------------------------------
-
-GET /restaurantes/{restauranteId}
-
-GET /cozinhas/{cozinhaId}
-
-GET /estados/{estadoId}
-
-GET /cidades/{cidadeId}
-
--------------------------------------
-
-PUT /restaurantes/{restauranteId}
-
-PUT /cozinhas/{cozinhaId}
-
-PUT /estados/{estadoId}
-
-PUT /cidades/{cidadeId}
-
--------------------------------------
-
-DELETE /restaurantes/{restauranteId}
-
-DELETE /cozinhas/{cozinhaId}
-
-DELETE /estados/{estadoId}
-
-DELETE /cidades/{cidadeId}
+**A aplicação vai iniciar na porta http://localhost:8080**
 
