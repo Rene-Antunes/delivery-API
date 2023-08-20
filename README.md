@@ -2,7 +2,7 @@
 > :construction: API Rest feito em Java com Spring de Delivery de comida em construção :construction:
 
 <h2 id="sobre" >Descrição do Projeto </h2>
-Um sistema de delivery de comida algumas features são: permite cadastrar restaurantes e gerenciar pedidos para delivery. É permitido cadastro de usuário, produtos, imagens, cadastrar responsáveis para gerenciamento de conta emissão de pedidos, envios de confirmação, buscas simples e complexas e gerir relatorios.
+Um sistema de delivery de comida algumas features são: permite cadastrar restaurantes e gerenciar pedidos para delivery. É permitido cadastro de usuário, produtos, imagens, cadastrar responsáveis para gerenciamento de conta emissão de pedidos, envios de confirmação, buscas simples e complexas e gerir relatórios.
 
 
 
