@@ -11,12 +11,9 @@ import com.delivery.food.domain.repository.CustomJpaRepository;
 
 public class CustomJpaRepositoryImpl<T, ID> extends SimpleJpaRepository<T, ID>
 implements CustomJpaRepository<T, ID>{
-
-	
 	
 	private EntityManager manager;
 	
-
 	public CustomJpaRepositoryImpl(JpaEntityInformation<T, ?> entityInformation,
 			EntityManager entityManager) {
 		

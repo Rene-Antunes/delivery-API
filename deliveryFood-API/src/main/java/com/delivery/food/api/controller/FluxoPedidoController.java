@@ -36,5 +36,5 @@ public class FluxoPedidoController {
 		fluxoPedidoService.cancelar(codigoPedido);
 	}
 	
-	
+
 }

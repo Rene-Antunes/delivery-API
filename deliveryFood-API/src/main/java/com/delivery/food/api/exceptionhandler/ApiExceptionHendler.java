@@ -1,6 +1,7 @@
 package com.delivery.food.api.exceptionhandler;
 
 import java.time.OffsetDateTime;
+import java.util.IllegalFormatConversionException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -250,7 +251,7 @@ public class ApiExceptionHendler extends ResponseEntityExceptionHandler{
 	}
 	
 	@ExceptionHandler(NegocioException.class)
-	public ResponseEntity<?> handlehandleNegocioException(
+	public ResponseEntity<?> handleNegocioException(
 			NegocioException e, WebRequest request ){
 		
 		HttpStatus status = HttpStatus.BAD_REQUEST;

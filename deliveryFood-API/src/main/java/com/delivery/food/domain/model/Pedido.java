@@ -107,7 +107,7 @@ public class Pedido extends AbstractAggregateRoot<Pedido>{
 	private void setStatus(StatusPedido novoStatus) {
 		if(getStatus().naoPodeAlterarPara(novoStatus)) {
 			throw new NegocioException(
-					String.format("Status do pedido %d não pode ser alterado de %s para %s",
+					String.format("Status do pedido %s não pode ser alterado de %s para %s",
 							getCodigo(), getStatus().getDescricao(), novoStatus.getDescricao()));
 		}
 		

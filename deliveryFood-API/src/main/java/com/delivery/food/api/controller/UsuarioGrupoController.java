@@ -25,8 +25,8 @@ public class UsuarioGrupoController {
 	@Autowired
 	private CadastroUsuarioService cadastroUsuarioService;
 	
-	 @Autowired
-	    private GrupoModelAssembler grupoModelAssembler;
+	@Autowired
+	private GrupoModelAssembler grupoModelAssembler;
 	 
 	 
 	 @GetMapping
