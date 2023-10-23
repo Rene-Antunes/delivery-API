@@ -66,11 +66,17 @@ mvn spring-boot:run
 
 **A aplicação vai iniciar na porta http://localhost:8080**
 
+______________________________________________________________
+
 **Documentação com swagger/SpringFox3.0**
+
 
 Assim que startar a aplicação pode-se acessar a documentação:
 
+
 Lembrando que, a documentação ainda está em construção neste momento.
+
+
 ```
   http://localhost:8080/swagger-ui/index.html
 ```
