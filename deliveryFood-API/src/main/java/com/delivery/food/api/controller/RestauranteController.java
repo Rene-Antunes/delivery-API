@@ -6,7 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -45,8 +45,9 @@ public class RestauranteController {
 	@Autowired
 	private RestauranteModelDisassembler restauranteModelDisassembler;
 	
+	
 	@JsonView(RestauranteView.Resumo.class)
-	@GetMapping
+	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<RestauranteModel> listar(){
 		return restauranteModelAssembler.toColletionModel(restauranteRepository.findAll());
 		
@@ -58,7 +59,7 @@ public class RestauranteController {
 		return listar();
 	}
 	
-	@GetMapping("/{restauranteId}")
+	@GetMapping(value = "/{restauranteId}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public RestauranteModel buscar(@PathVariable	Long restauranteId) {
 	    Restaurante restaurante = cadastroRestauranteService.buscarOuFalhar(restauranteId);
 	    return  restauranteModelAssembler.toModel(restaurante);
@@ -67,7 +68,7 @@ public class RestauranteController {
 
 	
 	
-	@PostMapping
+	@PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.CREATED)
 	public RestauranteModel adicionar(@RequestBody @Valid RestauranteInput restauranteInput){
 		try {
@@ -82,7 +83,7 @@ public class RestauranteController {
 				
 	}
 	
-	@PutMapping("/{restauranteId}")
+	@PutMapping(value = "/{restauranteId}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public RestauranteModel atualizar(@PathVariable Long restauranteId, 
 			@RequestBody @Valid RestauranteInput restauranteInput){
 
@@ -99,7 +100,7 @@ public class RestauranteController {
 	
 	}
 	
-	@PutMapping("/ativacoes")
+	@PutMapping(value = "/ativacoes", produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void ativarMultiplos(@RequestBody List<Long> restauranteIds) {
 		try {

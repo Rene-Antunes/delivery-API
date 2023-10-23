@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,13 +21,14 @@ import com.delivery.food.api.assembler.GrupoInputDisassembler;
 import com.delivery.food.api.assembler.GrupoModelAssembler;
 import com.delivery.food.api.model.GrupoModel;
 import com.delivery.food.api.model.input.GrupoInput;
+import com.delivery.food.api.openapi.controller.GrupoControllerOpenApi;
 import com.delivery.food.domain.model.Grupo;
 import com.delivery.food.domain.repository.GrupoRepository;
 import com.delivery.food.domain.service.CadastroGrupoService;
 
 @RestController
-@RequestMapping("/grupos")
-public class GrupoController {
+@RequestMapping(value = "/grupos")
+public class GrupoController implements GrupoControllerOpenApi {
 	
 	@Autowired
 	private GrupoRepository grupoRepository;
@@ -40,14 +42,14 @@ public class GrupoController {
 	@Autowired
 	private GrupoInputDisassembler grupoInputDisassembler;
 
-	@GetMapping
+	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<GrupoModel> listar() {
 		List<Grupo> todosGrupos = grupoRepository.findAll();
 		
 		return grupoModelAssembler.toCollectionModel(todosGrupos);
 	}
 	
-	@GetMapping("/{grupoId}")
+	@GetMapping(value ="/{grupoId}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public GrupoModel buscar(@PathVariable Long grupoId) {
 		Grupo grupo = cadastroGrupoService.buscarOuFalhar(grupoId);
 		
@@ -55,7 +57,7 @@ public class GrupoController {
 		
 	}
 	
-	@PostMapping
+	@PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.CREATED)
 	public GrupoModel adicionar(@RequestBody @Valid GrupoInput grupoInput) {
 		Grupo grupo = grupoInputDisassembler.toDomainObject(grupoInput);
@@ -65,7 +67,7 @@ public class GrupoController {
 		return grupoModelAssembler.toModel(grupo);
 	}
 	
-	@PutMapping("/{grupoId}")
+	@PutMapping(value = "/{grupoId}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public GrupoModel atualizar(@PathVariable Long grupoId,
 			@RequestBody @Valid GrupoInput grupoInput) {
 		

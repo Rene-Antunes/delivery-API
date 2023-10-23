@@ -10,6 +10,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +25,7 @@ import com.delivery.food.api.assembler.PedidoResumoModelAssembler;
 import com.delivery.food.api.model.PedidoModel;
 import com.delivery.food.api.model.PedidoResumoModel;
 import com.delivery.food.api.model.input.PedidoInput;
+import com.delivery.food.api.openapi.controller.PedidoControllerOpenApi;
 import com.delivery.food.core.data.PageableTranslator;
 import com.delivery.food.domain.exception.EntidadeNaoEncontrataException;
 import com.delivery.food.domain.exception.NegocioException;
@@ -37,7 +39,7 @@ import com.google.common.collect.ImmutableMap;
 
 @RestController
 @RequestMapping(value = "/pedidos")
-public class PedidoController {
+public class PedidoController implements PedidoControllerOpenApi {
 	
 	@Autowired
     private PedidoRepository pedidoRepository;
@@ -54,8 +56,8 @@ public class PedidoController {
     @Autowired
     private PedidoInputDisassembler pedidoInputDisassembler;
     
-    
-    @GetMapping
+  
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public Page<PedidoResumoModel> pesquisar(PedidoFilter filtro,
     	@PageableDefault(size=10) Pageable pageable){
     	
@@ -72,14 +74,15 @@ public class PedidoController {
     	return pedidosResumoModelPage;
     }
     
-    @GetMapping("/{codigoPedido}")
+   
+    @GetMapping(value = "/{codigoPedido}", produces = MediaType.APPLICATION_JSON_VALUE)
     public PedidoModel buscar(@PathVariable String codigoPedido) {
     	Pedido pedido = emissaoPedidoService.buscarOuFalhar(codigoPedido);
     	
     	return pedidoModelAssembler.toModel(pedido);
     }
     
-    @PostMapping
+    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
     public PedidoModel adicionar(@Valid @RequestBody PedidoInput pedidoInput) {
     	try {
