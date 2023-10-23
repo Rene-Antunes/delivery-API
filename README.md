@@ -71,6 +71,7 @@ mvn spring-boot:run
 ```
   http://localhost:8080/swagger-ui/index.html
 ```
- ![image](https://github.com/Rene-Antunes/delivery-API/assets/93138911/daaa9a76-8968-4e2b-932d-64259f937c17)
+![image](https://github.com/Rene-Antunes/delivery-API/assets/93138911/3697714a-8f42-440e-ba59-b17ba9e151d2)
+
   
 
