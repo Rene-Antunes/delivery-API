@@ -74,7 +74,6 @@ ______
 Assim que startar a aplicação pode-se acessar a documentação:
 
 
-Lembrando que, a documentação ainda está em construção neste momento.
 
 
 ```
