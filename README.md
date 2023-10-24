@@ -2,34 +2,49 @@
 > :construction: API Rest feito em Java com Spring de Delivery de comida em construção :construction:
 
 <h2 id="sobre" >Descrição do Projeto </h2>
-Um sistema de delivery de comida algumas features são: permite cadastrar restaurantes e gerenciar pedidos para delivery. É permitido cadastro de usuário, produtos, imagens, cadastrar responsáveis para gerenciamento de conta emissão de pedidos, envios de confirmação, buscas simples e complexas e gerir relatórios.
+Um sistema de delivery de comida, algumas features são: permite cadastrar restaurantes e gerenciar pedidos para delivery, permite cadastro de usuário, produtos, imagens, cadastrar responsáveis para gerenciamento de conta emissão de pedidos, envios de confirmação por e-mail, buscas simples e complexas e gerir relatórios de vendas.
 
 
 
 <h2 id="features">✅ Features</h2>
 
-- [x] CRUD de usuário
-- [x] CRUD  de produtos
-- [x] CRUD  de fotos
-- [x] CRUD  de Cidades
-- [x] CRUD  de estados
-- [x] CRUD  de grupos
-- [x] CRUD  de endereço
-- [x] CRUD  de permissões
-- [x] CRUD  de formas de pagamento
+- [x] Gerenciamento de usuários
+- [x] Gerenciamento de produtos
+- [x] Gerenciamento de fotos
+- [x] Gerenciamento de Cidades
+- [x] Gerenciamento de estados
+- [x] Gerenciamento de grupos
+- [x] Gerenciamento de endereço
+- [x] Gerenciamento de permissões
+- [x] Gerenciamento de formas de pagamento
 - [x] Emissão de pedidos
-- [x] Associação  e desassociação de permissões a grupos
-- [x] Mudança de  status de pedido ex: criado, enviado, entregue.
+- [x] Associação e desassociação de permissões a grupos de usuários
+- [x] Mudança de status de pedido ex: criado, enviado, entregue.
+
+<h3>Veja mais na documentação completa do pejeto:</h3>
+
+**Documentação com swagger/SpringFox3.0**
 
 
-h2 id="comoUsar">⚙️ Como Usar</h2>
+Assim que startar a aplicação pode-se acessar a documentação:
+
+```
+  http://localhost:8080/swagger-ui/index.html
+```
+
+<strong>Interface gerada pelo SpringFox:</strong>
+
+![image](https://github.com/Rene-Antunes/delivery-API/assets/93138911/dcdb6ca6-5f1b-4b0f-bdeb-0daacbf0bc8c)
+
+
+<h2 id="comoUsar">⚙️ Como Usar</h2>
 
 <h2 id="requisitos">✅ Pré-requisitos e tecnologias </h2>
 
 - [Java](https://www.java.com/pt-BR/download/manual.jsp)
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - Maven
-- IDE [Intellij](https://www.jetbrains.com/idea/download/?section=windows) ou [Eclipse](https://www.eclipse.org/downloads/) (Recomendo usar Eclipse para fazer uso do SpringToolSuit) [SpringToolSuit](https://spring.io/tools)
+- IDE [Intellij](https://www.jetbrains.com/idea/download/?section=windows) ou [Eclipse](https://www.eclipse.org/downloads/) (Recomendo usar Eclipse para fazer uso do SpringToolsSuit) [SpringToolsSuit](https://spring.io/tools)
 - [MySQL](https://www.mysql.com/downloads/)
 - [Postman](https://www.postman.com)
 - [lombok](https://projectlombok.org/download) (Para instalar o Lombok basta apenas fazer o dowload abrir o arquivo e esperar ele escanear e selecionar a IDE que deseja usar.
@@ -46,7 +61,17 @@ git clone <https://github.com/Rene-Antunes/delivery-API/tree/main>
 
 
 <h3>Configurando banco de dados</h3>
-É necessário ter MySQL instalado em sua máquina, após instalação crie um banco de dados com nome <strong>deliveryfood</strong>. Pode atualizar o usuário e senha no arquivo <strong>application.properties</strong> para os dados do seu banco de dados.
+É necessário ter MySQL instalado em sua máquina, após instalação crie um banco de dados com nome que desejar, caso não queira criar, o projeto está configurado para criar um banco automáticamente com nome de <strong>deliveryfood</strong>, pode-se alterar o nome do banco indo em application.properties e alterando a propriedade:
+
+``` 
+  spring.datasource.url=jdbc:mysql://localhost:3306/NomeDoBando?createDatabaseIfNotExist=true&serverTimezone=UTC
+```
+Pode atualizar o usuário e senha no mesmo arquivo nas propriedades para os dados do seu banco:
+``` 
+spring.datasource.password=senha
+spring.datasource.username=nomeRoot
+```
+
 
 <h3>Iniciar aplicação</h3>
 Iniciar por meio da IDE iniciando a classe DeliveyFoodApiAplication.java.
@@ -67,20 +92,7 @@ mvn spring-boot:run
 
 **A aplicação vai iniciar na porta http://localhost:8080**
 
-______
 
-**Documentação com swagger/SpringFox3.0**
-
-
-Assim que startar a aplicação pode-se acessar a documentação:
-
-
-
-
-```
-  http://localhost:8080/swagger-ui/index.html
-```
-![image](https://github.com/Rene-Antunes/delivery-API/assets/93138911/dcdb6ca6-5f1b-4b0f-bdeb-0daacbf0bc8c)
 
 
   
