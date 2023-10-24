@@ -29,7 +29,7 @@ h2 id="comoUsar">⚙️ Como Usar</h2>
 - [Java](https://www.java.com/pt-BR/download/manual.jsp)
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - Maven
-- IDE [Intellij](https://www.jetbrains.com/idea/download/?section=windows) ou [Eclipse](https://www.eclipse.org/downloads/)
+- IDE [Intellij](https://www.jetbrains.com/idea/download/?section=windows) ou [Eclipse](https://www.eclipse.org/downloads/) (Recomendo usar Eclipse para fazer uso do SpringToolSuit) [SpringToolSuit](https://spring.io/tools)
 - [MySQL](https://www.mysql.com/downloads/)
 - [Postman](https://www.postman.com)
 - [lombok](https://projectlombok.org/download)
