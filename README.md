@@ -32,8 +32,9 @@ h2 id="comoUsar">⚙️ Como Usar</h2>
 - IDE [Intellij](https://www.jetbrains.com/idea/download/?section=windows) ou [Eclipse](https://www.eclipse.org/downloads/) (Recomendo usar Eclipse para fazer uso do SpringToolSuit) [SpringToolSuit](https://spring.io/tools)
 - [MySQL](https://www.mysql.com/downloads/)
 - [Postman](https://www.postman.com)
-- [lombok](https://projectlombok.org/download)
-
+- [lombok](https://projectlombok.org/download) (Para instalar o Lombok basta apenas fazer o dowload abrir o arquivo e esperar ele escanear e selecionar a IDE que deseja usar.
+  Não é necessário instalar a dependência no pom.xml pois já está no projeto
+)
 
 <h2 id="rodandoApi">🎲 Rodando a Api</h2>
 
