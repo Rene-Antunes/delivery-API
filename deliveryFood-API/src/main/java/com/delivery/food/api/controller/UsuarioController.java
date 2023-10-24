@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,13 +22,14 @@ import com.delivery.food.api.model.UsuarioModel;
 import com.delivery.food.api.model.input.SenhaInput;
 import com.delivery.food.api.model.input.UsuarioComSenhaInput;
 import com.delivery.food.api.model.input.UsuarioInput;
+import com.delivery.food.api.openapi.controller.UsuarioControllerOpenApi;
 import com.delivery.food.domain.model.Usuario;
 import com.delivery.food.domain.repository.UsuarioRepository;
 import com.delivery.food.domain.service.CadastroUsuarioService;
 
 @RestController
 @RequestMapping(value = "/usuarios")
-public class UsuarioController {
+public class UsuarioController implements UsuarioControllerOpenApi {
 	
 		@Autowired
 	    private UsuarioRepository usuarioRepository;
@@ -42,7 +44,7 @@ public class UsuarioController {
 	    private UsuarioInputDisassembler usuarioInputDisassembler;
 	    
 	    
-	    @GetMapping
+	    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	    public List<UsuarioModel> listar(){
 	    	List<Usuario> todosUsarios = usuarioRepository.findAll();
 	    	
@@ -51,7 +53,7 @@ public class UsuarioController {
 	    }
 	    
 	    
-	    @GetMapping("/{usuarioId}")
+	    @GetMapping(value = "/{usuarioId}", produces = MediaType.APPLICATION_JSON_VALUE)
 	    public UsuarioModel buscar(@PathVariable Long usuarioId){
 	    	Usuario usuario = cadastroUsuario.buscarOuFalhar(usuarioId);
 	    	
@@ -59,7 +61,7 @@ public class UsuarioController {
 	    	
 	    }
 	    
-	    @PostMapping
+	    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	    @ResponseStatus(HttpStatus.CREATED)
 	    public UsuarioModel adicionar(@RequestBody @Valid UsuarioComSenhaInput usuarioInput) {
 	    	Usuario usuario = usuarioInputDisassembler.toDomainObject(usuarioInput);
@@ -68,7 +70,7 @@ public class UsuarioController {
 	    	
 	    }
 	    
-	    @PutMapping("/{usuarioId}")
+	    @PutMapping(value = "/{usuarioId}", produces = MediaType.APPLICATION_JSON_VALUE)
 	    public UsuarioModel atualizar(@PathVariable Long usuarioId,
 	    		@RequestBody @Valid UsuarioInput usuarioInput) {
 	    	Usuario usuarioAtual = cadastroUsuario.buscarOuFalhar(usuarioId);

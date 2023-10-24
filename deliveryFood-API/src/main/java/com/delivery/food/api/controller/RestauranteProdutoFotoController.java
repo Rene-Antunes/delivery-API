@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -50,7 +51,7 @@ public class RestauranteProdutoFotoController implements RestauranteProdutoFotoC
 	private FotoStorageService fotoStorageService;
 	
 	
-	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.IMAGE_PNG_VALUE })
 	public FotoProdutoModel buscar(@PathVariable Long restauranteId,
 			@PathVariable Long produtoId) {
 		FotoProduto fotoProduto = catalogoFotoProdutoService.buscarOuFalhar(restauranteId, produtoId);
@@ -59,13 +60,14 @@ public class RestauranteProdutoFotoController implements RestauranteProdutoFotoC
 
 	
 	
-	@PutMapping
+	@PutMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public FotoProdutoModel atualizarFoto(@PathVariable Long restauranteId,
-			@PathVariable Long produtoId, @Valid FotoProdutoInput fotoProdutoinput) throws IOException {
+			@PathVariable Long produtoId, @Valid FotoProdutoInput fotoProdutoinput,
+			@RequestPart(required = true) MultipartFile arquivo) throws IOException {
 		
 		Produto produto = cadastroProdutoService.buscarOuFalhar(restauranteId, produtoId);
 		
-		MultipartFile arquivo = fotoProdutoinput.getArquivo();
+//		MultipartFile arquivo = fotoProdutoinput.getArquivo();
 		
 		FotoProduto foto = new FotoProduto();
 		

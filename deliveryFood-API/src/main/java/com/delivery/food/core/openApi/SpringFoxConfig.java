@@ -1,5 +1,10 @@
 package com.delivery.food.core.openApi;
 
+import java.io.File;
+import java.io.InputStream;
+import java.net.URI;
+import java.net.URL;
+import java.net.URLStreamHandler;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
@@ -7,6 +12,7 @@ import java.util.function.Consumer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpMethod;
@@ -20,9 +26,9 @@ import com.delivery.food.api.model.PedidoResumoModel;
 import com.delivery.food.api.openapi.model.CozinhasModelOpenApi;
 import com.delivery.food.api.openapi.model.PageableModelApi;
 import com.delivery.food.api.openapi.model.PedidosResumoModelOpenApi;
-import com.delivery.food.domain.model.Pedido;
 import com.fasterxml.classmate.TypeResolver;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+
 
 import springfox.bean.validators.configuration.BeanValidatorPluginsConfiguration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -37,6 +43,7 @@ import springfox.documentation.service.Tag;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.json.JacksonModuleRegistrar;
 import springfox.documentation.spring.web.plugins.Docket;
+
 
 @Configuration
 @Import(BeanValidatorPluginsConfiguration.class)
@@ -57,7 +64,9 @@ public class SpringFoxConfig {
 				.globalResponses(HttpMethod.PUT, globalPostPutResponseMessages())
 				.globalResponses(HttpMethod.DELETE, globalDeleteResponseMessages())
 				.additionalModels(typeResolver.resolve(Problem.class))
-				.ignoredParameterTypes(ServletWebRequest.class)
+				.ignoredParameterTypes(ServletWebRequest.class,
+						URL.class, URI.class, URLStreamHandler.class,
+						Resource.class, File.class, InputStream.class)
 				.directModelSubstitute(Pageable.class, PageableModelApi.class)
 				.alternateTypeRules(AlternateTypeRules.newRule(typeResolver.resolve(Page.class, CozinhaModel.class), CozinhasModelOpenApi.class))
 				.alternateTypeRules(AlternateTypeRules.newRule(typeResolver.resolve(Page.class, PedidoResumoModel.class), PedidosResumoModelOpenApi.class))
@@ -69,7 +78,9 @@ public class SpringFoxConfig {
 						new Tag("Pedidos", "Gerencia os pedidos"),
 						new Tag("Restaurantes", "Gerencia os restaurantes"),
 						new Tag("Estados", "Gerencia os estados"),
-						new Tag("Produtos", "Gerencia os produtos de restaurantes"));
+						new Tag("Produtos", "Gerencia os produtos de restaurantes"),
+						new Tag("Usuários", "Gerencia os usuários"),
+						new Tag("Estatísticas", "Estatísticas de DeliveyFood"));
 		
 	}
 	
