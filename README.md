@@ -8,20 +8,20 @@ Um sistema de delivery de comida, algumas features são: permite cadastrar resta
 
 <h2 id="features">✅ Features</h2>
 
-- [x] Gerenciamento de usuários
-- [x] Gerenciamento de produtos
-- [x] Gerenciamento de fotos
-- [x] Gerenciamento de Cidades
-- [x] Gerenciamento de estados
-- [x] Gerenciamento de grupos
-- [x] Gerenciamento de endereço
-- [x] Gerenciamento de permissões
-- [x] Gerenciamento de formas de pagamento
-- [x] Emissão de pedidos
-- [x] Associação e desassociação de permissões a grupos de usuários
-- [x] Mudança de status de pedido ex: criado, enviado, entregue.
+- ☑️ Gerenciamento de usuários
+- ☑️ Gerenciamento de produtos
+- ☑️ Gerenciamento de fotos
+- ☑️ Gerenciamento de Cidades
+- ☑️ Gerenciamento de estados
+- ☑️ Gerenciamento de grupos
+- ☑️ Gerenciamento de endereço
+- ☑️ Gerenciamento de permissões
+- ☑️ Gerenciamento de formas de pagamento
+- ☑️ Emissão de pedidos
+- ☑️ Associação e desassociação de permissões a grupos de usuários
+- ☑️ Mudança de status de pedido ex: criado, enviado, entregue.
 
-<h3>Veja mais na documentação completa do pejeto:</h3>
+<h3>🛑Veja mais na documentação completa do pejeto:</h3>
 
 **Documentação com swagger/SpringFox3.0**
 
@@ -44,7 +44,7 @@ Assim que startar a aplicação pode-se acessar a documentação:
 - [Java](https://www.java.com/pt-BR/download/manual.jsp)
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - Maven
-- IDE [Intellij](https://www.jetbrains.com/idea/download/?section=windows) ou [Eclipse](https://www.eclipse.org/downloads/) (Recomendo usar Eclipse para fazer uso do SpringToolsSuit) [SpringToolsSuit](https://spring.io/tools)
+- IDE [Intellij](https://www.jetbrains.com/idea/download/?section=windows) ou [Eclipse](https://www.eclipse.org/downloads/) ⚠️(Recomendo usar Eclipse para fazer uso do SpringToolsSuit) [SpringToolsSuit](https://spring.io/tools)
 - [MySQL](https://www.mysql.com/downloads/)
 - [Postman](https://www.postman.com)
 - [lombok](https://projectlombok.org/download) (Para instalar o Lombok basta apenas fazer o dowload abrir o arquivo e esperar ele escanear e selecionar a IDE que deseja usar.
@@ -53,14 +53,14 @@ Assim que startar a aplicação pode-se acessar a documentação:
 
 <h2 id="rodandoApi">🎲 Rodando a Api</h2>
 
-<h3> Clone este repositório</h3>
+<h3>✔️ Clone este repositório</h3>
 
 ```
 git clone <https://github.com/Rene-Antunes/delivery-API/tree/main>
 ```
 
 
-<h3>Configurando banco de dados</h3>
+<h3>⚙️Configurando banco de dados</h3>
 É necessário ter MySQL instalado em sua máquina, após instalação crie um banco de dados com nome que desejar, caso não queira criar, o projeto está configurado para criar um banco automáticamente com nome de <strong>deliveryfood</strong>, pode-se alterar o nome do banco indo em application.properties e alterando a propriedade:
 
 ``` 
@@ -73,7 +73,7 @@ spring.datasource.username=nomeRoot
 ```
 
 
-<h3>Iniciar aplicação</h3>
+<h3>Iniciar aplicação 🚀</h3>
 Iniciar por meio da IDE iniciando a classe DeliveyFoodApiAplication.java.
 
 Pelo terminal:
