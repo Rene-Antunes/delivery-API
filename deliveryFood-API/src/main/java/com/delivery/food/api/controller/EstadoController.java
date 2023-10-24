@@ -8,6 +8,7 @@ import javax.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +24,7 @@ import com.delivery.food.api.assembler.EstadoInputDisassembler;
 import com.delivery.food.api.assembler.EstadoModelAssembler;
 import com.delivery.food.api.model.EstadoModel;
 import com.delivery.food.api.model.input.EstadoInput;
+import com.delivery.food.api.openapi.controller.EstadoControllerOpenApi;
 import com.delivery.food.domain.exception.EntidadeEmUsoException;
 import com.delivery.food.domain.exception.EntidadeNaoEncontrataException;
 import com.delivery.food.domain.model.Estado;
@@ -33,7 +35,7 @@ import com.delivery.food.domain.service.CadastroEstadoService;
 
 @RestController
 @RequestMapping("/estados")
-public class EstadoController {
+public class EstadoController implements EstadoControllerOpenApi{
 	
 	@Autowired
 	private EstadoRepository estadodoRepository;
@@ -47,7 +49,7 @@ public class EstadoController {
 	@Autowired
 	private EstadoInputDisassembler estadoInputDisassembler; 
 	
-	@GetMapping
+	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<EstadoModel> listar(){
 		
 		List<Estado> todosEstados = estadodoRepository.findAll();
@@ -56,14 +58,14 @@ public class EstadoController {
 		
 	}
 	
-	@GetMapping("/{estadoId}")
+	@GetMapping(value = "/{estadoId}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public EstadoModel buscar(@PathVariable Long estadoId) {
 		Estado esdado = cadastroEstadoService.buscarOufalhar(estadoId);
 		
 		return estadoModelAssembler.toModel(esdado) ;
 	}
 	
-	@PostMapping
+	@PostMapping(MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.CREATED)
 	public EstadoModel adicionar(@RequestBody @Valid EstadoInput estadoInput) {
 		Estado estado = estadoInputDisassembler.toDomainObject(estadoInput);
@@ -73,7 +75,7 @@ public class EstadoController {
 		return estadoModelAssembler.toModel(estado);
 	}
 	
-	@PutMapping("/{estadoId}")
+	@PutMapping(value = "/{estadoId}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public EstadoModel atualizar(@PathVariable Long estadoId, @RequestBody @Valid EstadoInput estadoInput){
 			Estado estadoAtual = cadastroEstadoService.buscarOufalhar(estadoId);
 			estadoInputDisassembler.copyToDomainObject(estadoInput, estadoAtual);

@@ -35,7 +35,7 @@ public interface PedidoControllerOpenApi {
 	    			name = "campos", paramType = "query", type = "string")
 	    })
 	    @GetMapping
-	    public Page<PedidoResumoModel> pesquisar(PedidoFilter filtro,
+	    Page<PedidoResumoModel> pesquisar(PedidoFilter filtro,
 	    	@PageableDefault(size=10) Pageable pageable);
 	    
 	    
@@ -45,7 +45,7 @@ public interface PedidoControllerOpenApi {
 	    			name = "campos", paramType = "query", type = "string")
 	    })
 	    @GetMapping("/{codigoPedido}")
-	    public PedidoModel buscar(
+	   PedidoModel buscar(
 	    		@ApiParam(name = "corpo", value = "Representação de um novo pedido", required = true)
 	    		@PathVariable String codigoPedido);
 	    
@@ -56,7 +56,7 @@ public interface PedidoControllerOpenApi {
 	     })
 	    @PostMapping
 	    @ResponseStatus(HttpStatus.CREATED)
-	    public PedidoModel adicionar(@Valid @RequestBody PedidoInput pedidoInput);
+	    PedidoModel adicionar(@Valid @RequestBody PedidoInput pedidoInput);
 	    
 	    
 }

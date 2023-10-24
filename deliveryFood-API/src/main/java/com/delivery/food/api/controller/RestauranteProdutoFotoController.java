@@ -25,6 +25,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.delivery.food.api.assembler.FotoProdutoModelAssembler;
 import com.delivery.food.api.model.FotoProdutoModel;
 import com.delivery.food.api.model.input.FotoProdutoInput;
+import com.delivery.food.api.openapi.controller.RestauranteProdutoFotoControllerOpenApi;
 import com.delivery.food.domain.exception.EntidadeNaoEncontrataException;
 import com.delivery.food.domain.model.FotoProduto;
 import com.delivery.food.domain.model.Produto;
@@ -34,7 +35,7 @@ import com.delivery.food.domain.service.FotoStorageService;
 
 @RestController
 @RequestMapping("/restaurantes/{restauranteId}/produtos/{produtoId}/foto")
-public class RestauranteProdutoFotoController {
+public class RestauranteProdutoFotoController implements RestauranteProdutoFotoControllerOpenApi{
 	
 	@Autowired
 	private CadastroProdutoService cadastroProdutoService;
@@ -58,7 +59,7 @@ public class RestauranteProdutoFotoController {
 
 	
 	
-	@PutMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+	@PutMapping
 	public FotoProdutoModel atualizarFoto(@PathVariable Long restauranteId,
 			@PathVariable Long produtoId, @Valid FotoProdutoInput fotoProdutoinput) throws IOException {
 		
@@ -79,7 +80,7 @@ public class RestauranteProdutoFotoController {
 		return fotoProdutoModelAssembler.toModel(fotoSalva);
 	}
 	
-	@GetMapping
+	@GetMapping(produces = MediaType.ALL_VALUE)
 	public ResponseEntity<InputStreamResource> servirFoto(@PathVariable Long restauranteId,
 			@PathVariable Long produtoId, @RequestHeader(name = "accept") String acceptHeader)
 					throws HttpMediaTypeNotAcceptableException {

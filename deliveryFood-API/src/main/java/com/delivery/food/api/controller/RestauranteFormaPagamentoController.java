@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,6 +23,7 @@ import com.delivery.food.api.assembler.RestauranteModelDisassembler;
 import com.delivery.food.api.model.FormaPagamentoModel;
 import com.delivery.food.api.model.RestauranteModel;
 import com.delivery.food.api.model.input.RestauranteInput;
+import com.delivery.food.api.openapi.controller.RestauranteFormaPagamentoControllerOpenApi;
 import com.delivery.food.domain.exception.EntidadeNaoEncontrataException;
 import com.delivery.food.domain.exception.NegocioException;
 import com.delivery.food.domain.model.Restaurante;
@@ -30,7 +32,7 @@ import com.delivery.food.domain.service.CadastroRestauranteService;
 
 @RestController
 @RequestMapping("/restaurantes/{restauranteId}/formas-pagamento")
-public class RestauranteFormaPagamentoController {
+public class RestauranteFormaPagamentoController implements RestauranteFormaPagamentoControllerOpenApi{
 
 	
 	@Autowired
@@ -39,7 +41,7 @@ public class RestauranteFormaPagamentoController {
 	@Autowired
 	FormaPagamentoAssembler formaPagamentoAssembler;
 	
-	@GetMapping
+	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<FormaPagamentoModel> listar(@PathVariable Long restauranteId){
 		
 		Restaurante restaurante = cadastroRestauranteService.buscarOuFalhar(restauranteId);

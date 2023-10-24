@@ -17,14 +17,14 @@ import io.swagger.annotations.ApiResponses;
 public interface CozinhaControllerOpenApi {
 	
 	@ApiOperation("Lista as cozinhas")
-	public Page<CozinhaModel> listar (Pageable pageable);
+	 Page<CozinhaModel> listar (Pageable pageable);
 	
 	@ApiOperation("Busca uma cozinha")
 	@ApiResponses({
 		@ApiResponse(code = 400, message = " ID do cozinha inválido", response = Problem.class),
 		@ApiResponse(code = 404, message = "Cozinha não encontrado", response = Problem.class)
 	})
-	public CozinhaModel buscar(
+	CozinhaModel buscar(
 			@ApiParam(value = "ID de um cozinha", example = "1", required = true)
 			Long cozinhaId);
 	
@@ -32,7 +32,7 @@ public interface CozinhaControllerOpenApi {
 	@ApiResponses({
 		@ApiResponse(code = 201, message = "Cozinha cadastrada")
 	})
-	public CozinhaModel adicionar(
+	CozinhaModel adicionar(
 			@ApiParam(name = "Corpo", value = "Representação de uma nova cozinha", required = true)
 			CozinhaInput cozinhaInput);
 	
@@ -41,7 +41,7 @@ public interface CozinhaControllerOpenApi {
 		@ApiResponse(code = 200, message = "Cozinha atualizado"),
 		@ApiResponse(code = 404, message = "Cozinha não encontrado", response = Problem.class)
 	})
-	public CozinhaModel atualizar(
+	CozinhaModel atualizar(
 			@ApiParam(value = "ID de um cozinha", example = "1", required = true)
 			Long cozinhaId, 
 			
@@ -53,7 +53,7 @@ public interface CozinhaControllerOpenApi {
 		@ApiResponse(code = 204, message = "Cozinha excluido"),
 		@ApiResponse(code = 404, message = "Cozinha não encontrado", response = Problem.class)
 	})
-	public void remover(
+	 void remover(
 			@ApiParam(value = "ID de um cozinha", example = "1", required = true)
 			Long cozinhaId);
 

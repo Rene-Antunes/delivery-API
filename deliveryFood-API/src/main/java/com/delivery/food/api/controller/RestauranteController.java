@@ -22,6 +22,7 @@ import com.delivery.food.api.assembler.RestauranteModelDisassembler;
 import com.delivery.food.api.model.RestauranteModel;
 import com.delivery.food.api.model.input.RestauranteInput;
 import com.delivery.food.api.model.view.RestauranteView;
+import com.delivery.food.api.openapi.controller.RestauranteControllerOpenApi;
 import com.delivery.food.domain.exception.EntidadeNaoEncontrataException;
 import com.delivery.food.domain.exception.NegocioException;
 import com.delivery.food.domain.model.Restaurante;
@@ -31,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 
 @RestController
 @RequestMapping("/restaurantes")
-public class RestauranteController {
+public class RestauranteController implements RestauranteControllerOpenApi {
 
 	@Autowired
 	private RestauranteRepository restauranteRepository;
@@ -100,7 +101,7 @@ public class RestauranteController {
 	
 	}
 	
-	@PutMapping(value = "/ativacoes", produces = MediaType.APPLICATION_JSON_VALUE)
+	@PutMapping("/ativacoes")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void ativarMultiplos(@RequestBody List<Long> restauranteIds) {
 		try {
