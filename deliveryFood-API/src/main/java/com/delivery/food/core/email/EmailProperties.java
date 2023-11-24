@@ -13,7 +13,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Component
-@ConfigurationProperties("renefood.email")
+@ConfigurationProperties("deliveryfood.email")
 public class EmailProperties {
 	
 	@NotNull
@@ -21,9 +21,6 @@ public class EmailProperties {
 	private SandBox sandbox = new SandBox();
 	
 	private Implemetacao impl = Implemetacao.FAKE;
-	
-	
-	
 	
 	@Getter
 	@Setter
