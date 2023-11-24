@@ -129,7 +129,14 @@
 		    <artifactId>jackson-datatype-jsr310</artifactId>
 		</dependency>
 		
+		<dependency>
+		    <groupId>com.amazonaws</groupId>
+		    <artifactId>aws-java-sdk-s3</artifactId>
+		    <version>1.12.595</version>
+		</dependency>
+		
 	</dependencies>
+	
 
 	<build>
 		<plugins>
