@@ -1,22 +1,35 @@
 package com.delivery.food.infrainstructure.service.storage;
 
-import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
 import org.flywaydb.core.internal.util.FileCopyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.delivery.food.core.storage.StorageProperties;
 import com.delivery.food.domain.service.FotoStorageService;
 
-@Service
 public class LocalFotoStorageService implements FotoStorageService {
 	
 	@Autowired
 	private StorageProperties storageProperties;
+
+	
+	@Override
+	public FotoRecuperada recuperar(String nomeArquivo) {
+		try {
+			Path arquivoPath = getArquivoPath(nomeArquivo);
+			
+			FotoRecuperada fotoRecuperada = FotoRecuperada.builder()
+					.inputStream(Files.newInputStream(arquivoPath))
+					.build();
+			
+			return fotoRecuperada;
+		} catch (Exception e) {
+			throw new StorageException("Não foi possível recuperar arquivo.", e);
+		}
+	}
 	
 	@Override
 	public void armazenar(NovaFoto novaFato) {
@@ -30,15 +43,6 @@ public class LocalFotoStorageService implements FotoStorageService {
 		}
 	}
 	
-	@Override
-	public InputStream recuperar(String nomeArquivo) {
-		try {
-			Path arquivoPath = getArquivoPath(nomeArquivo);
-			return Files.newInputStream(arquivoPath);
-		} catch (Exception e) {
-			throw new StorageException("Não foi possível recuperar arquivo.", e);
-		}
-	}
 	
 	@Override
 	public void remover(String nomeArquivo) {

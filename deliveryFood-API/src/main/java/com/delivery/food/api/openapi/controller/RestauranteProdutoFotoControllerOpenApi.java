@@ -56,7 +56,7 @@ public interface RestauranteProdutoFotoControllerOpenApi {
 			) throws IOException;
 	
 	@ApiOperation(value = "Busca a foto do produto de um restaurante", hidden = true)
-	ResponseEntity<InputStreamResource> servirFoto(@PathVariable Long restauranteId,
+	ResponseEntity<?> servirFoto(@PathVariable Long restauranteId,
 			@PathVariable Long produtoId, @RequestHeader(name = "accept") String acceptHeader) throws HttpMediaTypeNotAcceptableException;
 	
 	 @ApiOperation("Exclui a foto do produto de um restaurante")
