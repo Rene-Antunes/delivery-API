@@ -10,11 +10,11 @@ import com.delivery.food.infrainstructure.repository.CustomJpaRepositoryImpl;
 
 @SpringBootApplication
 @EnableJpaRepositories(repositoryBaseClass = CustomJpaRepositoryImpl.class)
-public class DeliveyFoodApiAplication {
+public class DeliveryFoodApiApplication {
 
 	public static void main(String[] args) {
 		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
-		SpringApplication.run(DeliveyFoodApiAplication.class, args);
+		SpringApplication.run(DeliveryFoodApiApplication.class, args);
 	}
 
 }
