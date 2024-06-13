@@ -52,7 +52,7 @@ As soon as you start the application you can access the documentation:
 ![image](https://github.com/Rene-Antunes/delivery-API/assets/93138911/dcdb6ca6-5f1b-4b0f-bdeb-0daacbf0bc8c)
 
 
-<h2 id="comoUsar">⚙️ Como Usar</h2>
+<h2 id="comoUsar">⚙️ How to use</h2>
 
 <h2 id="requisitos">✅ Pre-requirements and technologies </h2>
 
