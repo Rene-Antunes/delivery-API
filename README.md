@@ -1,7 +1,7 @@
 <h1>DeliveryFood-API</h1> 
 > :construction: Rest API made in Java with Food Delivery Spring under construction :construction:
 
-<h2 id="sobre" >Descrição do Projeto </h2>
+<h2 id="sobre" > About </h2>
 With a strong specialization in Java and Spring Framework. Recently, I completed this highly complex project focused on a food delivery system. Using Java and Spring Boot, the application achieved the following:
 
 Achievements:
@@ -54,7 +54,7 @@ As soon as you start the application you can access the documentation:
 
 <h2 id="comoUsar">⚙️ How to use</h2>
 
-<h2 id="requisitos">✅ Pre-requirements and technologies </h2>
+<h2 id="requisitos">✅ prerequisites and technologies </h2>
 
 - [Java](https://www.java.com/pt-BR/download/manual.jsp)
 - [Spring Boot](https://spring.io/projects/spring-boot)
