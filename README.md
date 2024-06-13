@@ -1,5 +1,5 @@
 <h1>DeliveryFood-API</h1> 
-> :construction: API Rest feito em Java com Spring de Delivery de comida em construção :construction:
+> :construction: Rest API made in Java with Food Delivery Spring under construction :construction:
 
 <h2 id="sobre" >Descrição do Projeto </h2>
 With a strong specialization in Java and Spring Framework. Recently, I completed this highly complex project focused on a food delivery system. Using Java and Spring Boot, the application achieved the following:
