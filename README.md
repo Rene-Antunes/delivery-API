@@ -21,20 +21,20 @@ technologies: Java · Spring Boot · Spring MVC · API REST · JPA (Java Persist
 
 <h2 id="features">✅ Features</h2>
 
-- ☑️ Management de usuários
-- ☑️ Management de produtos
-- ☑️ Management de fotos
-- ☑️ Management de Cidades
-- ☑️ Management de estados
-- ☑️ Management de grupos
-- ☑️ Management de endereço
-- ☑️ Management de permissões
-- ☑️ Management de formas de pagamento
+- ☑️ Management de users
+- ☑️ Management de products
+- ☑️ Management de photos
+- ☑️ Management de cities
+- ☑️ Management de States
+- ☑️ Management de groups
+- ☑️ Management de address
+- ☑️ Management de permitions
+- ☑️ Management de payment methods
 - ☑️ Issuing orders
 - ☑️ Associating and disassociating permissions with user groups
 - ☑️ Change of order status e.g. created, shipped, delivered.
 
-<h3>🛑Veja mais na documentação completa do pejeto:</h3>
+<h3>🛑See more in the complete pejeto documentation:</h3>
 
 As soon as you start the application you can access the documentation:
 
